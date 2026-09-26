@@ -1,0 +1,2 @@
+# Preserve supplied reference files, including their original CRLF line endings.
+reference/** -text -whitespace
