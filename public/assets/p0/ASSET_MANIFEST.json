@@ -1,0 +1,27 @@
+{
+  "version": "v3",
+  "status": "checked",
+  "notes": "Corrected crops; no adjacent assets or label fragments in P0 files.",
+  "files": [
+    "README.md",
+    "PREVIEW.png",
+    "food_cards/curry_chicken_rice.jpg",
+    "food_cards/garlic_lettuce.jpg",
+    "food_cards/tomato_egg.jpg",
+    "food_cards/meat_sauce_pasta.jpg",
+    "source/style_anchor.png",
+    "ingredients/tomato.png",
+    "ingredients/carrot.png",
+    "ingredients/cucumber.png",
+    "ingredients/egg.png",
+    "ingredients/onion.png",
+    "ingredients/lettuce.png",
+    "decorative/girl_cooking.png",
+    "decorative/plant_olive.png",
+    "decorative/basket_cat.png",
+    "tutorial/stir_fry.png",
+    "tutorial/cut_ingredients.png",
+    "tutorial/simmer.png",
+    "tutorial/wash_ingredients.png"
+  ]
+}

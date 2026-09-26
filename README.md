@@ -53,16 +53,20 @@ npm test
 - `src/domain.js`：数量、硬限制、库存批次、采购事务、FIFO 扣减、幂等和资源排程校验。
 - `src/ai.js`：AIService + MockAdapter + RealAIAdapter。
 - `src/app.js`：路由、组件和交互；`src/style.css`：视觉 tokens 和移动布局。
-- `tests/domain.test.mjs`：14 项业务测试。
+- `tests/domain.test.mjs`：14 项业务测试；另有 6 项 AI 网关测试。
 - `qa/`：浏览器路由检查及视觉截图，仅用于验收，不由应用引用。
 
-## AI 状态与后续接入
+## OpenAI 接入
 
-现在六类 AI 任务全部走 MockAdapter。菜谱、数量、库存、确认与资源冲突校验是实际代码；没有真实模型、真实 OCR 或登录后端。
+`planBasket()` 与 `recommendRecipes()` 默认通过 RealAIAdapter 请求本机 `/api/ai`。复制 `.env.example` 为 `.env`，仅在本机填写 `OPENAI_API_KEY`；默认模型 `gpt-4.1-mini`。不要把密钥发送到聊天或提交仓库。服务每次读取配置，填好后在页面重试即可。
 
-切换点：`new AIService(new RealAIAdapter('/api/ai'))`。后端接收 `{task,input}`，返回包内 contract 对应对象。后端需自行实现 `/api/ai`，密钥只存服务端环境，不进入前端。当前静态服务不提供这个端点。
+模型使用 [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)，只返回已验证菜谱 ID 与规划取舍。服务端先排除硬性饮食/厨具冲突，再验证 ID、锚点、餐次数量、排序完整性。用量、缺口、库存、事务和教程排程均由程序计算。上下文不含昵称、照片、自由备注；请求只发送本轮偏好、厨房、饮食限制、汇总库存和近期菜谱 ID。
 
-服务层拒绝未知菜谱和被限制菜谱，独立重算食材差额。教程返回 `stages[{id,title,start,end,resource,kind,text}]` 和总时长；程序验证完整性、准备依赖、灶位、锅具和最短时长，正文使用已验证 recipe instructions。图像候选可修改，用户确认才写入。
+缺密钥、超时、认证失败、额度错误或无效模型结果均明确报错，不自动用 Mock 冒充。做饭页仍可浏览明确标为“基础菜谱”的本地库；新食材方案必须成功调用模型。照片候选仍是明确标注的 Mock；教程是本地确定性排程。
+
+请求上下文相同的结果缓存 5 分钟，服务每分钟最多 15 次请求。服务仅监听本机，尚无公网部署/账户鉴权。
+
+`tests/ai-gateway.test.mjs` 使用假的网络响应验证网关边界，不是实际模型联调。本轮检查时 `.env` 尚未配置，真实 OpenAI 调用未验收。
 
 ## 当前边界
 
@@ -70,13 +74,12 @@ npm test
 - Recipe Library 只有 6 道示例菜，未知照片菜名可以存食记，但未关联菜谱的意愿暂不能用于食材规划。
 - 图片识别明确标为 Mock；相机使用浏览器文件/拍照入口，没有自定义取景器。
 - 登录、会员、通知发送、清缓存为未开放说明；资料页仅实现核心昵称、人数，其他设计字段待补。
-- 软偏好只实现基础排序。风味、按类型细化、复杂锅具复用、完整 DAG 与全部菜系待 Real AI 阶段。
-- 独立生成番茄炒蛋图片；其余插图为统一占位，见 MISSING_ASSETS.md。
+- 模型在现有 6 道菜谱内规划与排序；未扩充菜谱库，教程仍按确定性资源排程。
+- 五个核心页面使用提供的 P0 独立素材；未覆盖的食材和菜品使用统一占位，见 MISSING_ASSETS.md。
 - 视觉已逐页检查布局；尚非 22 页 Pixel Perfect。
 
 ## 下一步
 
-1. 服务端 AI 网关 + 规划、排序、协同教程真实模型 + 真实小票识别。
-2. 扩充有来源的结构化菜谱库、单位换算和硬限制词典。
-3. 补齐独立食材/厨具/教程素材，精修核心页；在真实 iPhone Safari / Android Chrome 验收。
-4. 云端库存事务与账号同步，然后补外围字段与设置。
+1. 填写本机 OpenAI 密钥，实测两类模型请求及完整采购链路。
+2. 对照 `design-qa.md` 补齐长尾素材、手写字体与圆桌细节。
+3. 扩充有来源的结构化菜谱库；不优先做 OCR、云同步、会员。

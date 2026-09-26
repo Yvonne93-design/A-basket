@@ -9,18 +9,20 @@ export class MockAdapter {
  async parseKitchenPhoto(){return {toolCandidates:[{type:'wok',name:'炒锅',quantityCandidate:1,confidence:0.5},{type:'stockpot',name:'汤锅',quantityCandidate:1,confidence:0.5}],stoveSlotsCandidate:2};}
 }
 // Backend handles credentials. The browser only posts task context to a same-origin endpoint.
-export class RealAIAdapter {
- constructor(endpoint='/api/ai'){this.endpoint=endpoint;}
- async request(task,input){const response=await fetch(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task,input}),signal:AbortSignal.timeout(30000)});if(!response.ok)throw new Error('AI 服务暂不可用，请稍后重试');return response.json();}
+export function aiContext(s){return {profile:{defaultDiners:s.profile.defaultDiners},cycle:s.cycle,diet:s.diet,kitchen:{stoveSlots:s.kitchen.stoveSlots,tools:s.kitchen.tools.map(({id,quantity,available})=>({id,quantity,available}))},stock:s.stock.map(({ingredientId,qty,unit,status})=>({ingredientId,qty,unit,status})),wanted:s.wanted.map(({id,linkedRecipeId})=>({id,linkedRecipeId})),records:s.records.slice(0,5).map(({recipeIds})=>({recipeIds:recipeIds||[]})),meal:{diners:s.meal.diners,selectedRecipeIds:s.meal.selectedRecipeIds,constraints:s.meal.constraints}};}
+export class RealAIAdapter extends MockAdapter {
+ constructor(endpoint='/api/ai'){super();this.endpoint=endpoint;}
+ async request(task,input){let response;try{response=await fetch(this.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({task,input:aiContext(input)}),signal:AbortSignal.timeout(35000)});}catch{throw new Error('AI 服务连接失败或超时，请重试');}const out=await response.json();if(!response.ok)throw new Error((typeof out.error==='string'?out.error:out.error?.message)||'AI 服务暂不可用，请稍后重试');return out;}
+ async planBasket(input){return this.request('planBasket',input);}
+ async recommendRecipes(input){return this.request('recommendRecipes',input);}
 }
-for(const task of ['planBasket','recommendRecipes','generateCookingPlan','parseReceiptOrIngredientPhoto','parseDishPhoto','parseKitchenPhoto'])RealAIAdapter.prototype[task]=function(input){return this.request(task,input);};
 export class AIService {
- constructor(adapter=new MockAdapter()){this.adapter=adapter;this.mode=adapter instanceof MockAdapter?'Mock':'Real';}
+ constructor(adapter=new MockAdapter()){this.adapter=adapter;this.mode=adapter instanceof RealAIAdapter?'Real':adapter instanceof MockAdapter?'Mock':'Real';}
  async planBasket(state){const out=await this.adapter.planBasket(structuredClone(state));if(!Array.isArray(out.referenceRecipeIds)||!out.referenceRecipeIds.length||out.referenceRecipeIds.some(id=>!recipes.some(r=>r.id===id&&eligible(r,state))))throw new Error('AI 方案未通过菜谱校验');const anchors=state.cycle.anchorWantedDishIds.map(id=>state.wanted.find(w=>w.id===id)?.linkedRecipeId).filter(Boolean);if(anchors.some(id=>!out.referenceRecipeIds.includes(id)))throw new Error('AI 方案遗漏了锚点菜');const rows=requirements(out.referenceRecipeIds,state.profile.defaultDiners).map(i=>{const existingQty=state.cycle.carryOverEnabled?totalStock(state,i.ingredientId):0;return {ingredientId:i.ingredientId,requiredQty:i.qty,existingQty,purchaseQty:Math.max(0,i.qty-existingQty),unit:i.unit,reasonCodes:[existingQty?'优先用已有食材':'来自本轮参考菜品'],locked:false};});return {...out,ingredientSuggestions:rows,tradeoffs:Array.isArray(out.tradeoffs)?out.tradeoffs.filter(x=>typeof x==='string'):[]};}
- async recommendRecipes(state){const out=await this.adapter.recommendRecipes(structuredClone(state));if(!Array.isArray(out.recipeCards))throw new Error('推荐格式无效');return {recipeCards:out.recipeCards.filter(c=>recipes.some(r=>r.id===c.recipeId&&eligible(r,state))).map(c=>{const missing=shortages(state,requirements([c.recipeId],state.meal.diners));return {...c,canCookNow:!missing.length,missingIngredients:missing,shortReason:missing.length?`还缺 ${missing.length} 种食材`:'现有食材可做'};})};}
+ async recommendRecipes(state){const out=await this.adapter.recommendRecipes(structuredClone(state));if(!Array.isArray(out.recipeCards))throw new Error('推荐格式无效');return {...out,recipeCards:out.recipeCards.filter(c=>recipes.some(r=>r.id===c.recipeId&&eligible(r,state))).map(c=>{const missing=shortages(state,requirements([c.recipeId],state.meal.diners));return {...c,canCookNow:!missing.length,missingIngredients:missing,shortReason:missing.length?`还缺 ${missing.length} 种食材`:'现有食材可做'};})};}
  async generateCookingPlan(state){const plan=await this.adapter.generateCookingPlan(structuredClone(state));return validateCookingPlan(plan,state);}
  async parseReceiptOrIngredientPhoto(image){const out=await this.adapter.parseReceiptOrIngredientPhoto(image);if(!Array.isArray(out.items))throw new Error('识别格式无效，请手动添加');return {items:out.items.filter(i=>ingredients[i.ingredientIdCandidate]).map(i=>({...i,qtyCandidate:Number.isFinite(i.qtyCandidate)&&i.qtyCandidate>0?i.qtyCandidate:1,unitCandidate:ingredients[i.ingredientIdCandidate].unit}))};}
  async parseDishPhoto(image){const out=await this.adapter.parseDishPhoto(image);if(!Array.isArray(out.dishNameCandidates)||typeof out.dishNameCandidates[0]!=='string')throw new Error('识别失败，请手动填写');return out;}
  async parseKitchenPhoto(image){const out=await this.adapter.parseKitchenPhoto(image);if(!Array.isArray(out.toolCandidates))throw new Error('识别失败，请手动添加厨具');return out;}
 }
-export const ai=new AIService();
+export const ai=new AIService(new RealAIAdapter());

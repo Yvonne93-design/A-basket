@@ -1,18 +1,11 @@
-# 素材交付与待补
+# 独立素材回填
 
-已完成独立素材：`public/assets/tomato_scrambled_egg.png`。
-生成方式：内置 image_gen 工具，无 Screen 裁切。
+来源：用户提供的 `一篮_P0_Visual_Assets_v3`；文件存于 `public/assets/p0/`，保留 ASSET_MANIFEST.json。所有运行时素材均独立文件，没有使用 Screen 裁切或截图 UI。
 
-最终 Prompt：
-> Use case: photorealistic-natural. Create one standalone food-card asset: Chinese tomato scrambled eggs 番茄炒蛋, realistic home-cooked 2-person portion, small scallion garnish, shallow ivory ceramic plate on warm cream linen, natural warm daylight, slightly overhead close view, food fills frame, restrained colors, 4:3 composition. No text, no UI, no watermark.
+已使用：番茄、鸡蛋、生菜、黄瓜、洋葱、胡萝卜；番茄炒蛋、蒜蓉生菜；basket_cat、plant_olive；wash_ingredients、cut_ingredients、stir_fry、simmer。girl_cooking 已复制但本轮五页没有匹配使用位置。
 
-优先核心流且控制成本，本轮仅完成上述正式素材。其他目前为统一背景与符号占位，不声称为正式插画：
+咖喱鸡饭、肉酱意面已复制但未映射到照烧鸡饭、奶香蘑菇面，避免图菜不符。其余四道菜、未覆盖食材、菜系插画仍用统一占位。原生成 tomato_scrambled_egg.png 保留，核心页改用用户素材。
 
-- Asset Spec 全部 20 个手绘食材图。
-- 全部 10 个手绘厨具图。
-- 全部 11 个菜系/餐型图。
-- 其余 8 个 Food Card 图；当前 Seed 只覆盖其中一部分，另有土豆炒鸡蛋示例。
-- 教程 hero / wash / cut / prep / cook_1 / cook_2 / parallel / finish。
-- 欢迎页菜篮、厨房场景、人物、猫、植物装饰。
+标准图标来自 @phosphor-icons/core 2.1.1，MIT 许可随 assets/icons/LICENSE 一同保留。教程图片是动作示意，并非逐菜逐步的精确教学插图。
 
-所有图须独立生成，禁止从 design/screens 或 PDF 裁出。`qa/` 的参考/验收图片不参与运行页面。
+待补：其余食材、精确菜品、菜系插画、手写中文字体、圆桌椅子/桌布独立装饰。不要从参考屏幕中裁取。
