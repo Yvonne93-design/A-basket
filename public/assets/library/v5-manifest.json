@@ -1,0 +1,905 @@
+{
+  "version": "v5-curated",
+  "count": 81,
+  "categories": {
+    "ingredients": 25,
+    "cookware": 10,
+    "cuisine": 16,
+    "food_cards": 16,
+    "tutorial": 8,
+    "decorative": 6
+  },
+  "assets": [
+    "ingredients/tomato.png",
+    "ingredients/egg.png",
+    "ingredients/cucumber.png",
+    "ingredients/onion.png",
+    "ingredients/carrot.png",
+    "ingredients/potato.png",
+    "ingredients/chicken_breast.png",
+    "ingredients/beef.png",
+    "ingredients/pork.png",
+    "ingredients/tofu.png",
+    "ingredients/mushroom.png",
+    "ingredients/broccoli.png",
+    "ingredients/bell_pepper.png",
+    "ingredients/garlic.png",
+    "ingredients/ginger.png",
+    "ingredients/bokchoy.png",
+    "ingredients/spinach.png",
+    "ingredients/corn.png",
+    "ingredients/pumpkin.png",
+    "ingredients/eggplant.png",
+    "ingredients/zucchini.png",
+    "ingredients/chili.png",
+    "ingredients/leek.png",
+    "ingredients/salmon.png",
+    "ingredients/rice.png",
+    "cookware/wok.png",
+    "cookware/frying_pan.png",
+    "cookware/sauce_pan.png",
+    "cookware/stock_pot.png",
+    "cookware/steamer.png",
+    "cookware/knife.png",
+    "cookware/spatula.png",
+    "cookware/ladle.png",
+    "cookware/mixing_bowl.png",
+    "cookware/colander.png",
+    "cuisine/chinese.png",
+    "cuisine/japanese.png",
+    "cuisine/korean.png",
+    "cuisine/western.png",
+    "cuisine/southeast_asian.png",
+    "cuisine/home_cooking.png",
+    "cuisine/quick.png",
+    "cuisine/healthy.png",
+    "cuisine/vegetable.png",
+    "cuisine/meat.png",
+    "cuisine/seafood.png",
+    "cuisine/noodles.png",
+    "cuisine/soup.png",
+    "cuisine/rice_meal.png",
+    "cuisine/bbq.png",
+    "cuisine/dessert.png",
+    "food_cards/tomato_egg.png",
+    "food_cards/garlic_lettuce.png",
+    "food_cards/curry_chicken_rice.png",
+    "food_cards/meat_sauce_pasta.png",
+    "food_cards/miso_soup.png",
+    "food_cards/teriyaki_chicken.png",
+    "food_cards/beef_wellington.png",
+    "food_cards/spicy_mapo_tofu.png",
+    "food_cards/stir_fried_bokchoy.png",
+    "food_cards/salmon_steak.png",
+    "food_cards/tonkotsu_ramen.png",
+    "food_cards/beef_stir_fry.png",
+    "food_cards/gyoza.png",
+    "food_cards/hotpot.png",
+    "food_cards/caprese_salad.png",
+    "food_cards/fried_chicken.png",
+    "tutorial/wash.png",
+    "tutorial/cut.png",
+    "tutorial/stir_fry.png",
+    "tutorial/boil.png",
+    "tutorial/season.png",
+    "tutorial/plate.png",
+    "tutorial/simmer.png",
+    "tutorial/mix.png",
+    "decorative/basket.png",
+    "decorative/cat.png",
+    "decorative/girl_cooking.png",
+    "decorative/plant_02.png",
+    "decorative/lemon.png",
+    "decorative/cherry_tomato.png"
+  ],
+  "quality_rule": "Only assets visually checked from v4 are included; known broken crops removed.",
+  "format": "512x512 RGBA PNG",
+  "transparency": "alpha background",
+  "checks": [
+    {
+      "asset": "ingredients/tomato.png",
+      "alpha_bbox": [
+        103,
+        85,
+        433,
+        443
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/egg.png",
+      "alpha_bbox": [
+        89,
+        97,
+        444,
+        439
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/cucumber.png",
+      "alpha_bbox": [
+        102,
+        94,
+        435,
+        439
+      ],
+      "min_margin_px": 73
+    },
+    {
+      "asset": "ingredients/onion.png",
+      "alpha_bbox": [
+        122,
+        68,
+        388,
+        422
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/carrot.png",
+      "alpha_bbox": [
+        96,
+        125,
+        415,
+        413
+      ],
+      "min_margin_px": 96
+    },
+    {
+      "asset": "ingredients/potato.png",
+      "alpha_bbox": [
+        94,
+        98,
+        444,
+        422
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/chicken_breast.png",
+      "alpha_bbox": [
+        81,
+        105,
+        444,
+        414
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/beef.png",
+      "alpha_bbox": [
+        93,
+        105,
+        443,
+        418
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/pork.png",
+      "alpha_bbox": [
+        94,
+        111,
+        435,
+        418
+      ],
+      "min_margin_px": 77
+    },
+    {
+      "asset": "ingredients/tofu.png",
+      "alpha_bbox": [
+        95,
+        99,
+        443,
+        430
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/mushroom.png",
+      "alpha_bbox": [
+        93,
+        109,
+        444,
+        410
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/broccoli.png",
+      "alpha_bbox": [
+        85,
+        97,
+        444,
+        410
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/bell_pepper.png",
+      "alpha_bbox": [
+        93,
+        99,
+        423,
+        437
+      ],
+      "min_margin_px": 75
+    },
+    {
+      "asset": "ingredients/garlic.png",
+      "alpha_bbox": [
+        89,
+        96,
+        418,
+        441
+      ],
+      "min_margin_px": 71
+    },
+    {
+      "asset": "ingredients/ginger.png",
+      "alpha_bbox": [
+        95,
+        95,
+        430,
+        443
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/bokchoy.png",
+      "alpha_bbox": [
+        106,
+        83,
+        405,
+        415
+      ],
+      "min_margin_px": 83
+    },
+    {
+      "asset": "ingredients/spinach.png",
+      "alpha_bbox": [
+        89,
+        74,
+        436,
+        436
+      ],
+      "min_margin_px": 74
+    },
+    {
+      "asset": "ingredients/corn.png",
+      "alpha_bbox": [
+        100,
+        98,
+        410,
+        443
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/pumpkin.png",
+      "alpha_bbox": [
+        69,
+        108,
+        417,
+        430
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "ingredients/eggplant.png",
+      "alpha_bbox": [
+        69,
+        124,
+        444,
+        413
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/zucchini.png",
+      "alpha_bbox": [
+        68,
+        126,
+        444,
+        411
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/chili.png",
+      "alpha_bbox": null,
+      "min_margin_px": -1
+    },
+    {
+      "asset": "ingredients/leek.png",
+      "alpha_bbox": [
+        139,
+        96,
+        399,
+        415
+      ],
+      "min_margin_px": 96
+    },
+    {
+      "asset": "ingredients/salmon.png",
+      "alpha_bbox": [
+        68,
+        148,
+        444,
+        388
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "ingredients/rice.png",
+      "alpha_bbox": [
+        97,
+        131,
+        443,
+        380
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "cookware/wok.png",
+      "alpha_bbox": [
+        68,
+        152,
+        433,
+        381
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "cookware/frying_pan.png",
+      "alpha_bbox": [
+        84,
+        169,
+        420,
+        343
+      ],
+      "min_margin_px": 84
+    },
+    {
+      "asset": "cookware/sauce_pan.png",
+      "alpha_bbox": [
+        68,
+        116,
+        420,
+        420
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "cookware/stock_pot.png",
+      "alpha_bbox": [
+        80,
+        94,
+        407,
+        443
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "cookware/steamer.png",
+      "alpha_bbox": [
+        69,
+        125,
+        417,
+        386
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "cookware/knife.png",
+      "alpha_bbox": [
+        110,
+        84,
+        402,
+        434
+      ],
+      "min_margin_px": 78
+    },
+    {
+      "asset": "cookware/spatula.png",
+      "alpha_bbox": [
+        116,
+        88,
+        400,
+        445
+      ],
+      "min_margin_px": 67
+    },
+    {
+      "asset": "cookware/ladle.png",
+      "alpha_bbox": [
+        123,
+        84,
+        371,
+        446
+      ],
+      "min_margin_px": 66
+    },
+    {
+      "asset": "cookware/mixing_bowl.png",
+      "alpha_bbox": [
+        68,
+        143,
+        420,
+        393
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "cookware/colander.png",
+      "alpha_bbox": [
+        69,
+        100,
+        418,
+        437
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "cuisine/chinese.png",
+      "alpha_bbox": [
+        125,
+        100,
+        416,
+        412
+      ],
+      "min_margin_px": 96
+    },
+    {
+      "asset": "cuisine/japanese.png",
+      "alpha_bbox": [
+        104,
+        112,
+        436,
+        399
+      ],
+      "min_margin_px": 76
+    },
+    {
+      "asset": "cuisine/korean.png",
+      "alpha_bbox": [
+        81,
+        108,
+        420,
+        403
+      ],
+      "min_margin_px": 81
+    },
+    {
+      "asset": "cuisine/western.png",
+      "alpha_bbox": [
+        83,
+        100,
+        414,
+        412
+      ],
+      "min_margin_px": 83
+    },
+    {
+      "asset": "cuisine/southeast_asian.png",
+      "alpha_bbox": [
+        104,
+        135,
+        441,
+        377
+      ],
+      "min_margin_px": 71
+    },
+    {
+      "asset": "cuisine/home_cooking.png",
+      "alpha_bbox": [
+        131,
+        107,
+        417,
+        405
+      ],
+      "min_margin_px": 95
+    },
+    {
+      "asset": "cuisine/quick.png",
+      "alpha_bbox": [
+        156,
+        100,
+        386,
+        412
+      ],
+      "min_margin_px": 100
+    },
+    {
+      "asset": "cuisine/healthy.png",
+      "alpha_bbox": [
+        119,
+        101,
+        424,
+        411
+      ],
+      "min_margin_px": 88
+    },
+    {
+      "asset": "cuisine/vegetable.png",
+      "alpha_bbox": [
+        123,
+        108,
+        413,
+        404
+      ],
+      "min_margin_px": 99
+    },
+    {
+      "asset": "cuisine/meat.png",
+      "alpha_bbox": [
+        105,
+        114,
+        441,
+        398
+      ],
+      "min_margin_px": 71
+    },
+    {
+      "asset": "cuisine/seafood.png",
+      "alpha_bbox": [
+        120,
+        102,
+        423,
+        410
+      ],
+      "min_margin_px": 89
+    },
+    {
+      "asset": "cuisine/noodles.png",
+      "alpha_bbox": [
+        108,
+        105,
+        438,
+        407
+      ],
+      "min_margin_px": 74
+    },
+    {
+      "asset": "cuisine/soup.png",
+      "alpha_bbox": [
+        110,
+        157,
+        440,
+        354
+      ],
+      "min_margin_px": 72
+    },
+    {
+      "asset": "cuisine/rice_meal.png",
+      "alpha_bbox": [
+        126,
+        104,
+        418,
+        408
+      ],
+      "min_margin_px": 94
+    },
+    {
+      "asset": "cuisine/bbq.png",
+      "alpha_bbox": [
+        120,
+        104,
+        424,
+        408
+      ],
+      "min_margin_px": 88
+    },
+    {
+      "asset": "cuisine/dessert.png",
+      "alpha_bbox": [
+        105,
+        98,
+        425,
+        414
+      ],
+      "min_margin_px": 87
+    },
+    {
+      "asset": "food_cards/tomato_egg.png",
+      "alpha_bbox": [
+        90,
+        130,
+        422,
+        371
+      ],
+      "min_margin_px": 90
+    },
+    {
+      "asset": "food_cards/garlic_lettuce.png",
+      "alpha_bbox": [
+        71,
+        119,
+        422,
+        382
+      ],
+      "min_margin_px": 71
+    },
+    {
+      "asset": "food_cards/curry_chicken_rice.png",
+      "alpha_bbox": [
+        72,
+        98,
+        420,
+        389
+      ],
+      "min_margin_px": 72
+    },
+    {
+      "asset": "food_cards/meat_sauce_pasta.png",
+      "alpha_bbox": [
+        89,
+        118,
+        423,
+        371
+      ],
+      "min_margin_px": 89
+    },
+    {
+      "asset": "food_cards/miso_soup.png",
+      "alpha_bbox": [
+        68,
+        110,
+        421,
+        378
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "food_cards/teriyaki_chicken.png",
+      "alpha_bbox": [
+        73,
+        108,
+        417,
+        378
+      ],
+      "min_margin_px": 73
+    },
+    {
+      "asset": "food_cards/beef_wellington.png",
+      "alpha_bbox": [
+        90,
+        132,
+        422,
+        358
+      ],
+      "min_margin_px": 90
+    },
+    {
+      "asset": "food_cards/spicy_mapo_tofu.png",
+      "alpha_bbox": [
+        82,
+        149,
+        422,
+        340
+      ],
+      "min_margin_px": 82
+    },
+    {
+      "asset": "food_cards/stir_fried_bokchoy.png",
+      "alpha_bbox": [
+        75,
+        139,
+        422,
+        350
+      ],
+      "min_margin_px": 75
+    },
+    {
+      "asset": "food_cards/salmon_steak.png",
+      "alpha_bbox": [
+        83,
+        144,
+        421,
+        344
+      ],
+      "min_margin_px": 83
+    },
+    {
+      "asset": "food_cards/tonkotsu_ramen.png",
+      "alpha_bbox": [
+        89,
+        131,
+        423,
+        358
+      ],
+      "min_margin_px": 89
+    },
+    {
+      "asset": "food_cards/beef_stir_fry.png",
+      "alpha_bbox": [
+        71,
+        145,
+        423,
+        345
+      ],
+      "min_margin_px": 71
+    },
+    {
+      "asset": "food_cards/gyoza.png",
+      "alpha_bbox": [
+        67,
+        141,
+        425,
+        354
+      ],
+      "min_margin_px": 67
+    },
+    {
+      "asset": "food_cards/hotpot.png",
+      "alpha_bbox": [
+        81,
+        117,
+        438,
+        373
+      ],
+      "min_margin_px": 74
+    },
+    {
+      "asset": "food_cards/caprese_salad.png",
+      "alpha_bbox": [
+        92,
+        132,
+        420,
+        355
+      ],
+      "min_margin_px": 92
+    },
+    {
+      "asset": "food_cards/fried_chicken.png",
+      "alpha_bbox": [
+        75,
+        130,
+        422,
+        362
+      ],
+      "min_margin_px": 75
+    },
+    {
+      "asset": "tutorial/wash.png",
+      "alpha_bbox": [
+        76,
+        133,
+        420,
+        386
+      ],
+      "min_margin_px": 76
+    },
+    {
+      "asset": "tutorial/cut.png",
+      "alpha_bbox": [
+        92,
+        146,
+        420,
+        366
+      ],
+      "min_margin_px": 92
+    },
+    {
+      "asset": "tutorial/stir_fry.png",
+      "alpha_bbox": [
+        91,
+        126,
+        444,
+        385
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "tutorial/boil.png",
+      "alpha_bbox": [
+        88,
+        133,
+        444,
+        403
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "tutorial/season.png",
+      "alpha_bbox": [
+        106,
+        106,
+        435,
+        382
+      ],
+      "min_margin_px": 77
+    },
+    {
+      "asset": "tutorial/plate.png",
+      "alpha_bbox": [
+        102,
+        147,
+        410,
+        386
+      ],
+      "min_margin_px": 102
+    },
+    {
+      "asset": "tutorial/simmer.png",
+      "alpha_bbox": [
+        93,
+        147,
+        430,
+        365
+      ],
+      "min_margin_px": 82
+    },
+    {
+      "asset": "tutorial/mix.png",
+      "alpha_bbox": [
+        68,
+        119,
+        436,
+        409
+      ],
+      "min_margin_px": 68
+    },
+    {
+      "asset": "decorative/basket.png",
+      "alpha_bbox": [
+        69,
+        97,
+        443,
+        406
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "decorative/cat.png",
+      "alpha_bbox": [
+        90,
+        125,
+        443,
+        365
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "decorative/girl_cooking.png",
+      "alpha_bbox": [
+        97,
+        88,
+        443,
+        415
+      ],
+      "min_margin_px": 69
+    },
+    {
+      "asset": "decorative/plant_02.png",
+      "alpha_bbox": [
+        145,
+        105,
+        367,
+        407
+      ],
+      "min_margin_px": 105
+    },
+    {
+      "asset": "decorative/lemon.png",
+      "alpha_bbox": [
+        108,
+        111,
+        397,
+        401
+      ],
+      "min_margin_px": 108
+    },
+    {
+      "asset": "decorative/cherry_tomato.png",
+      "alpha_bbox": [
+        96,
+        72,
+        380,
+        404
+      ],
+      "min_margin_px": 72
+    }
+  ]
+}

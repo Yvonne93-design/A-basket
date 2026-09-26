@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: yilan-demo
+    runtime: node
+    branch: feature/iphone17-v0
+    plan: free
+    buildCommand: npm run check && npm test
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: HOST
+        value: 0.0.0.0
+      - key: OPENAI_BASE_URL
+        value: https://api.deepseek.com
+      - key: OPENAI_MODEL
+        value: deepseek-flash
+      - key: OPENAI_API_KEY
+        sync: false

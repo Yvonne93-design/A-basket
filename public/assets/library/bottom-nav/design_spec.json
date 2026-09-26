@@ -1,0 +1,45 @@
+{
+  "component": "Bottom Navigation",
+  "visual_style": "warm hand-drawn watercolor illustration; soft volume; not photorealistic; not clay-3D",
+  "asset_type": "PNG with true alpha transparency",
+  "master_canvas": "512x512 px",
+  "recommended_display_size": "26x26 pt/px logical (visual asset); 28x28 may be used on larger screens",
+  "ios_exports": {
+    "@1x": "28x28 px",
+    "@2x": "56x56 px",
+    "@3x": "84x84 px"
+  },
+  "tap_target_minimum": "44x44 pt",
+  "active_state": {
+    "icon": "full-color active asset",
+    "background_container": {
+      "size": "44x44 pt",
+      "corner_radius": "14 pt",
+      "fill": "#EEF2E2"
+    },
+    "label_color": "#64774A"
+  },
+  "inactive_state": {
+    "icon": "warm monochrome inactive asset",
+    "label_color": "#8B867B"
+  },
+  "label": {
+    "size": "12 pt",
+    "weight": "Medium/500",
+    "gap_below_icon": "8–10 pt from selected background container to label"
+  },
+  "implementation_rules": [
+    "Do not redraw, vectorize, recolor, crop, or add shadows to these icon images.",
+    "Use object-fit/contain and preserve the complete transparent canvas.",
+    "The selected pale-green rounded rectangle is a separate UI container; it is NOT baked into the PNG.",
+    "Use active PNG only for the selected tab and inactive PNG for all other tabs.",
+    "Respect the device bottom safe-area inset; do not hard-code the home-indicator spacing."
+  ],
+  "layout_notes": [
+    "Selected-state background and label must never touch or visually overlap.",
+    "Use 8–10 pt vertical breathing room between the bottom of the 44pt selected container and the label.",
+    "Center the icon optically inside the selected container, with a slight 1pt upward optical adjustment if needed.",
+    "Keep the label baseline aligned across all four tabs.",
+    "Do not reduce the gap to compensate for device safe-area differences; handle safe area below the entire tab bar."
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "chicken",
+    "name": "鸡腿肉",
+    "file": "ingredients/chicken.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      19,
+      1200,
+      1222
+    ]
+  },
+  {
+    "id": "milk",
+    "name": "牛奶",
+    "file": "ingredients/milk.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      41,
+      21,
+      1200,
+      1228
+    ]
+  },
+  {
+    "id": "scallion",
+    "name": "小葱",
+    "file": "ingredients/scallion.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      39,
+      19,
+      1226,
+      1223
+    ]
+  },
+  {
+    "id": "noodles",
+    "name": "面条",
+    "file": "ingredients/noodles.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      16,
+      1232,
+      1254
+    ]
+  },
+  {
+    "id": "cooking_oil",
+    "name": "食用油",
+    "file": "ingredients/cooking_oil.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      33,
+      21,
+      1224,
+      1230
+    ]
+  },
+  {
+    "id": "soy",
+    "name": "酱油",
+    "file": "ingredients/soy.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      49,
+      57,
+      1218,
+      1197
+    ]
+  },
+  {
+    "id": "salt",
+    "name": "盐",
+    "file": "ingredients/salt.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      20,
+      1250,
+      1254
+    ]
+  },
+  {
+    "id": "miso_tofu_soup",
+    "name": "香菇豆腐汤",
+    "file": "food_cards/miso_tofu_soup.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      21,
+      1150,
+      1236
+    ]
+  },
+  {
+    "id": "creamy_mushroom_pasta",
+    "name": "奶香蘑菇面",
+    "file": "food_cards/creamy_mushroom_pasta.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      19,
+      1228,
+      1181
+    ]
+  },
+  {
+    "id": "potato_egg",
+    "name": "土豆炒鸡蛋",
+    "file": "food_cards/potato_egg.png",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      8,
+      1232,
+      1254
+    ]
+  }
+]

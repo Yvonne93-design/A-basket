@@ -1,0 +1,1011 @@
+{
+  "checkedAt": "2026-09-26T10:07:08.341Z",
+  "base": "http://localhost:4173",
+  "status": {
+    "mode": "real",
+    "configured": false,
+    "model": "deepseek-flash",
+    "provider": "deepseek",
+    "tasks": [
+      "planBasket",
+      "recommendRecipes",
+      "proposeCookingStrategy"
+    ],
+    "fallback": true
+  },
+  "results": {
+    "planBasket": {
+      "referenceRecipeIds": [
+        "tomato_egg_soup",
+        "tomato_scrambled_egg",
+        "tomato_tofu",
+        "cucumber_egg",
+        "miso_tofu_soup",
+        "potato_egg"
+      ],
+      "planningStrategy": [
+        "preserve_anchor",
+        "reuse_stock",
+        "reuse_ingredients",
+        "reduce_one_off_purchase"
+      ],
+      "planningInsights": [
+        {
+          "type": "reuse_existing",
+          "ingredientId": "tomato",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "tomato_tofu",
+            "tomato_egg_soup"
+          ],
+          "messageCode": "reuse_existing"
+        },
+        {
+          "type": "shared_ingredient",
+          "ingredientId": "tomato",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "tomato_tofu",
+            "tomato_egg_soup"
+          ],
+          "messageCode": "shared_ingredient"
+        },
+        {
+          "type": "reuse_existing",
+          "ingredientId": "egg",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "potato_egg",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "reuse_existing"
+        },
+        {
+          "type": "shared_ingredient",
+          "ingredientId": "egg",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "potato_egg",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "shared_ingredient"
+        },
+        {
+          "type": "reuse_existing",
+          "ingredientId": "cooking_oil",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "potato_egg",
+            "tomato_tofu",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "reuse_existing"
+        },
+        {
+          "type": "shared_ingredient",
+          "ingredientId": "cooking_oil",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "potato_egg",
+            "tomato_tofu",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "shared_ingredient"
+        },
+        {
+          "type": "reuse_existing",
+          "ingredientId": "salt",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "miso_tofu_soup",
+            "potato_egg",
+            "tomato_tofu",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "reuse_existing"
+        },
+        {
+          "type": "shared_ingredient",
+          "ingredientId": "salt",
+          "recipeIds": [
+            "tomato_scrambled_egg",
+            "miso_tofu_soup",
+            "potato_egg",
+            "tomato_tofu",
+            "tomato_egg_soup",
+            "cucumber_egg"
+          ],
+          "messageCode": "shared_ingredient"
+        }
+      ],
+      "tradeoffs": [],
+      "meta": {
+        "source": "fallback",
+        "model": "deepseek-flash",
+        "fallbackReason": "AI_NOT_CONFIGURED",
+        "message": "AI 服务暂时繁忙，已使用基础规划。"
+      },
+      "ingredientSuggestions": [
+        {
+          "ingredientId": "tomato",
+          "requiredQty": 5,
+          "existingQty": 2,
+          "purchaseQty": 3,
+          "unit": "个",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "egg",
+          "requiredQty": 10,
+          "existingQty": 3,
+          "purchaseQty": 7,
+          "unit": "个",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "salt",
+          "requiredQty": 12,
+          "existingQty": 4,
+          "purchaseQty": 8,
+          "unit": "克",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "cooking_oil",
+          "requiredQty": 40,
+          "existingQty": 10,
+          "purchaseQty": 30,
+          "unit": "毫升",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "tofu",
+          "requiredQty": 500,
+          "existingQty": 200,
+          "purchaseQty": 300,
+          "unit": "克",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "cucumber",
+          "requiredQty": 2,
+          "existingQty": 0,
+          "purchaseQty": 2,
+          "unit": "根",
+          "reasonCodes": [
+            "来自本轮参考菜品"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "mushroom",
+          "requiredQty": 100,
+          "existingQty": 100,
+          "purchaseQty": 0,
+          "unit": "克",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "scallion",
+          "requiredQty": 1,
+          "existingQty": 1,
+          "purchaseQty": 0,
+          "unit": "根",
+          "reasonCodes": [
+            "优先用已有食材"
+          ],
+          "locked": false
+        },
+        {
+          "ingredientId": "potato",
+          "requiredQty": 2,
+          "existingQty": 0,
+          "purchaseQty": 2,
+          "unit": "个",
+          "reasonCodes": [
+            "来自本轮参考菜品"
+          ],
+          "locked": false
+        }
+      ]
+    },
+    "recommendRecipes": {
+      "recipeCards": [
+        {
+          "recipeId": "tomato_egg_soup",
+          "reasonCodes": [
+            "stock_ready",
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 94,
+          "canCookNow": true,
+          "missingIngredients": [],
+          "shortReason": "现有食材可做 · 用得上现有食材"
+        },
+        {
+          "recipeId": "miso_tofu_soup",
+          "reasonCodes": [
+            "stock_ready",
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 82,
+          "canCookNow": true,
+          "missingIngredients": [],
+          "shortReason": "现有食材可做 · 用得上现有食材"
+        },
+        {
+          "recipeId": "tomato_scrambled_egg",
+          "reasonCodes": [
+            "stock_ready",
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 82,
+          "canCookNow": true,
+          "missingIngredients": [],
+          "shortReason": "现有食材可做 · 用得上现有食材"
+        },
+        {
+          "recipeId": "cucumber_egg",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 41,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "cucumber",
+              "qty": 2,
+              "unit": "根",
+              "missing": 2
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "potato_egg",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 41,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "potato",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "tomato_tofu",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 41,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "tofu",
+              "qty": 300,
+              "unit": "克",
+              "missing": 100
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "vegetable_noodles",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 33,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "noodles",
+              "qty": 180,
+              "unit": "克",
+              "missing": 180
+            },
+            {
+              "ingredientId": "spinach",
+              "qty": 1,
+              "unit": "把",
+              "missing": 1
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "tofu_egg_rice",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 31,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "rice",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 10,
+              "unit": "毫升",
+              "missing": 10
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "egg_fried_rice",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 29,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "rice",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            },
+            {
+              "ingredientId": "carrot",
+              "qty": 1,
+              "unit": "根",
+              "missing": 1
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "korean_tofu_soup",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 26,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "tofu",
+              "qty": 300,
+              "unit": "克",
+              "missing": 100
+            },
+            {
+              "ingredientId": "kimchi",
+              "qty": 100,
+              "unit": "克",
+              "missing": 100
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "kimchi_fried_rice",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_prep",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 24,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "kimchi",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            },
+            {
+              "ingredientId": "rice",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "tomato_pasta",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 24,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "noodles",
+              "qty": 180,
+              "unit": "克",
+              "missing": 180
+            },
+            {
+              "ingredientId": "onion",
+              "qty": 1,
+              "unit": "个",
+              "missing": 1
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "broccoli_garlic",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "broccoli",
+              "qty": 300,
+              "unit": "克",
+              "missing": 300
+            },
+            {
+              "ingredientId": "garlic",
+              "qty": 2,
+              "unit": "瓣",
+              "missing": 2
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "garlic_lettuce",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "lettuce",
+              "qty": 1,
+              "unit": "把",
+              "missing": 1
+            },
+            {
+              "ingredientId": "garlic",
+              "qty": 2,
+              "unit": "瓣",
+              "missing": 2
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "garlic_spinach",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "spinach",
+              "qty": 1,
+              "unit": "把",
+              "missing": 1
+            },
+            {
+              "ingredientId": "garlic",
+              "qty": 2,
+              "unit": "瓣",
+              "missing": 2
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "mushroom_chicken",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "chicken",
+              "qty": 300,
+              "unit": "克",
+              "missing": 300
+            },
+            {
+              "ingredientId": "mushroom",
+              "qty": 150,
+              "unit": "克",
+              "missing": 50
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 15,
+              "unit": "毫升",
+              "missing": 15
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "vinegar_potato",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "potato",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            },
+            {
+              "ingredientId": "vinegar",
+              "qty": 10,
+              "unit": "毫升",
+              "missing": 10
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "creamy_mushroom_pasta",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_prep",
+            "low_cleanup",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 18,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "noodles",
+              "qty": 180,
+              "unit": "克",
+              "missing": 180
+            },
+            {
+              "ingredientId": "mushroom",
+              "qty": 150,
+              "unit": "克",
+              "missing": 50
+            },
+            {
+              "ingredientId": "milk",
+              "qty": 200,
+              "unit": "毫升",
+              "missing": 200
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "corn_pork_soup",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "avoids_recent_repeat"
+          ],
+          "score": 17,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "corn",
+              "qty": 1,
+              "unit": "根",
+              "missing": 1
+            },
+            {
+              "ingredientId": "pork",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "onion_beef_style_pork",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "avoids_recent_repeat"
+          ],
+          "score": 9,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "onion",
+              "qty": 1,
+              "unit": "个",
+              "missing": 1
+            },
+            {
+              "ingredientId": "pork",
+              "qty": 200,
+              "unit": "克",
+              "missing": 200
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 10,
+              "unit": "毫升",
+              "missing": 10
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "pepper_pork",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "avoids_recent_repeat"
+          ],
+          "score": 9,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "chili",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            },
+            {
+              "ingredientId": "pork",
+              "qty": 200,
+              "unit": "克",
+              "missing": 200
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 10,
+              "unit": "毫升",
+              "missing": 10
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "teriyaki_chicken_rice",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "avoids_recent_repeat"
+          ],
+          "score": 9,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "chicken",
+              "qty": 300,
+              "unit": "克",
+              "missing": 300
+            },
+            {
+              "ingredientId": "rice",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 20,
+              "unit": "毫升",
+              "missing": 20
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "korean_potato",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 6,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "potato",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 15,
+              "unit": "毫升",
+              "missing": 15
+            },
+            {
+              "ingredientId": "sugar",
+              "qty": 5,
+              "unit": "克",
+              "missing": 5
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "potato_soup",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "low_prep",
+            "low_cleanup",
+            "avoids_recent_repeat"
+          ],
+          "score": 6,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "potato",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            },
+            {
+              "ingredientId": "onion",
+              "qty": 1,
+              "unit": "个",
+              "missing": 1
+            },
+            {
+              "ingredientId": "milk",
+              "qty": 200,
+              "unit": "毫升",
+              "missing": 200
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "oyakodon",
+          "reasonCodes": [
+            "uses_existing_stock",
+            "fits_time",
+            "matches_cycle_style",
+            "complements_table",
+            "avoids_recent_repeat"
+          ],
+          "score": 5,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "chicken",
+              "qty": 200,
+              "unit": "克",
+              "missing": 200
+            },
+            {
+              "ingredientId": "onion",
+              "qty": 1,
+              "unit": "个",
+              "missing": 1
+            },
+            {
+              "ingredientId": "rice",
+              "qty": 150,
+              "unit": "克",
+              "missing": 150
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 15,
+              "unit": "毫升",
+              "missing": 15
+            },
+            {
+              "ingredientId": "sugar",
+              "qty": 5,
+              "unit": "克",
+              "missing": 5
+            }
+          ],
+          "shortReason": "用得上现有食材 · 符合这顿时间"
+        },
+        {
+          "recipeId": "japanese_potato_stew",
+          "reasonCodes": [
+            "fits_time",
+            "matches_cycle_style",
+            "avoids_recent_repeat"
+          ],
+          "score": -21,
+          "canCookNow": false,
+          "missingIngredients": [
+            {
+              "ingredientId": "potato",
+              "qty": 2,
+              "unit": "个",
+              "missing": 2
+            },
+            {
+              "ingredientId": "pork",
+              "qty": 200,
+              "unit": "克",
+              "missing": 200
+            },
+            {
+              "ingredientId": "onion",
+              "qty": 1,
+              "unit": "个",
+              "missing": 1
+            },
+            {
+              "ingredientId": "carrot",
+              "qty": 1,
+              "unit": "根",
+              "missing": 1
+            },
+            {
+              "ingredientId": "soy",
+              "qty": 15,
+              "unit": "毫升",
+              "missing": 15
+            },
+            {
+              "ingredientId": "sugar",
+              "qty": 5,
+              "unit": "克",
+              "missing": 5
+            }
+          ],
+          "shortReason": "符合这顿时间 · 符合本轮风格"
+        }
+      ],
+      "meta": {
+        "source": "fallback",
+        "model": "deepseek-flash",
+        "fallbackReason": "AI_NOT_CONFIGURED",
+        "message": "AI 服务暂时繁忙，已使用基础规划。"
+      }
+    },
+    "proposeCookingStrategy": {
+      "preferredOrder": [
+        "miso_tofu_soup",
+        "tomato_scrambled_egg"
+      ],
+      "sharedPrep": [],
+      "parallelCandidates": [],
+      "reuseCookware": [
+        "wok",
+        "stockpot"
+      ],
+      "priority": "fast",
+      "waitingTimeUse": [],
+      "meta": {
+        "source": "fallback",
+        "model": "deepseek-flash",
+        "fallbackReason": "AI_NOT_CONFIGURED",
+        "message": "AI 服务暂时繁忙，已使用基础规划。"
+      }
+    }
+  }
+}

@@ -1,0 +1,843 @@
+[
+  {
+    "dish": "奶香蘑菇面",
+    "preferred": "/assets/library/food-clean-v3/mushroom_cream_pasta.png",
+    "variants": [
+      "/assets/library/food-clean-v3/mushroom_cream_pasta.png",
+      "/assets/library/food-complete/mushroom_noodles_boil.png",
+      "/assets/library/food-20260926/food_cards/creamy_mushroom_pasta.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "香菇豆腐汤",
+    "preferred": "/assets/library/food-combinations/mushroom_tofu_soup.png",
+    "variants": [
+      "/assets/library/food-combinations/mushroom_tofu_soup.png",
+      "/assets/library/food-complete/mushroom_tofu_boil.png",
+      "/assets/library/food-expansion-24/shiitake_tofu_soup.png",
+      "/assets/library/food-20260926/food_cards/miso_tofu_soup.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "土豆炒鸡蛋",
+    "preferred": "/assets/library/food-20260926/food_cards/potato_egg.png",
+    "variants": [
+      "/assets/library/food-20260926/food_cards/potato_egg.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "bacon_egg_cheese_pasta",
+    "preferred": "/assets/library/food-clean-v3/bacon_egg_cheese_pasta.png",
+    "variants": [
+      "/assets/library/food-clean-v3/bacon_egg_cheese_pasta.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "basil_cheese_pasta",
+    "preferred": "/assets/library/food-clean-v3/basil_cheese_pasta.png",
+    "variants": [
+      "/assets/library/food-clean-v3/basil_cheese_pasta.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "青椒牛肉",
+    "preferred": "/assets/library/food-clean-v3/beef_green_pepper_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/beef_green_pepper_stir_fry.png",
+      "/assets/library/food-combinations/green_pepper_beef.png",
+      "/assets/library/food-complete/bell_pepper_beef_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "beef_onion_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/beef_onion_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/beef_onion_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "beef_rosemary_pan_fry",
+    "preferred": "/assets/library/food-clean-v3/beef_rosemary_pan_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/beef_rosemary_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "beef_tomato_pasta_simmer",
+    "preferred": "/assets/library/food-clean-v3/beef_tomato_pasta_simmer.png",
+    "variants": [
+      "/assets/library/food-clean-v3/beef_tomato_pasta_simmer.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "蒜蓉青菜",
+    "preferred": "/assets/library/food-clean-v3/bok_choy_garlic_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/bok_choy_garlic_stir_fry.png",
+      "/assets/library/food-combinations/garlic_bok_choy.png",
+      "/assets/library/food-complete/bokchoy_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "cabbage_chili_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/cabbage_chili_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/cabbage_chili_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "chicken_cola_braise",
+    "preferred": "/assets/library/food-clean-v3/chicken_cola_braise.png",
+    "variants": [
+      "/assets/library/food-clean-v3/chicken_cola_braise.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "chicken_herbs_roast",
+    "preferred": "/assets/library/food-clean-v3/chicken_herbs_roast.png",
+    "variants": [
+      "/assets/library/food-clean-v3/chicken_herbs_roast.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "corn_milk_soup",
+    "preferred": "/assets/library/food-clean-v3/corn_milk_soup.png",
+    "variants": [
+      "/assets/library/food-clean-v3/corn_milk_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "corn_pork_rib_soup",
+    "preferred": "/assets/library/food-clean-v3/corn_pork_rib_soup.png",
+    "variants": [
+      "/assets/library/food-clean-v3/corn_pork_rib_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "蒜香茄子",
+    "preferred": "/assets/library/food-clean-v3/eggplant_garlic_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/eggplant_garlic_stir_fry.png",
+      "/assets/library/food-complete/eggplant_stir_fry.png",
+      "/assets/library/food-expansion-24/garlic_eggplant.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "mixed_vegetables_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/mixed_vegetables_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/mixed_vegetables_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "炒蘑菇",
+    "preferred": "/assets/library/food-clean-v3/mushroom_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/mushroom_stir_fry.png",
+      "/assets/library/food-complete/mushroom_stir_fry.png",
+      "/assets/library/food-expansion-24/stir_fried_mushrooms.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "pork_chop_pan_fry",
+    "preferred": "/assets/library/food-clean-v3/pork_chop_pan_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/pork_chop_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "potato_rosemary_roast",
+    "preferred": "/assets/library/food-clean-v3/potato_rosemary_roast.png",
+    "variants": [
+      "/assets/library/food-clean-v3/potato_rosemary_roast.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "pumpkin_garlic_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/pumpkin_garlic_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/pumpkin_garlic_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "salmon_lemon_pan_fry",
+    "preferred": "/assets/library/food-clean-v3/salmon_lemon_pan_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/salmon_lemon_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "salmon_teriyaki_pan_fry",
+    "preferred": "/assets/library/food-clean-v3/salmon_teriyaki_pan_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/salmon_teriyaki_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "shrimp_garlic_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/shrimp_garlic_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/shrimp_garlic_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "虾仁炒饭",
+    "preferred": "/assets/library/food-clean-v3/shrimp_rice_egg_vegetable_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/shrimp_rice_egg_vegetable_stir_fry.png",
+      "/assets/library/food-combinations/shrimp_fried_rice.png",
+      "/assets/library/food-complete/shrimp_rice_egg_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "shrimp_tofu_vegetable_hotpot",
+    "preferred": "/assets/library/food-clean-v3/shrimp_tofu_vegetable_hotpot.png",
+    "variants": [
+      "/assets/library/food-clean-v3/shrimp_tofu_vegetable_hotpot.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "shrimp_tomato_pasta",
+    "preferred": "/assets/library/food-clean-v3/shrimp_tomato_pasta.png",
+    "variants": [
+      "/assets/library/food-clean-v3/shrimp_tomato_pasta.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "tofu_minced_pork_stir_fry",
+    "preferred": "/assets/library/food-clean-v3/tofu_minced_pork_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/tofu_minced_pork_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "tofu_seaweed_soup",
+    "preferred": "/assets/library/food-clean-v3/tofu_seaweed_soup.png",
+    "variants": [
+      "/assets/library/food-clean-v3/tofu_seaweed_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "番茄蛋花汤",
+    "preferred": "/assets/library/food-clean-v3/tomato_egg_soup.png",
+    "variants": [
+      "/assets/library/food-clean-v3/tomato_egg_soup.png",
+      "/assets/library/food-complete/tomato_egg_boil.png",
+      "/assets/library/food-expansion-24/tomato_egg_soup.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "番茄炒蛋",
+    "preferred": "/assets/library/food-clean-v3/tomato_egg_stir_fry.png",
+    "variants": [
+      "/assets/library/food-clean-v3/tomato_egg_stir_fry.png",
+      "/assets/library/food-combinations/tomato_scrambled_eggs.png",
+      "/assets/library/food-complete/tomato_egg_stir_fry.png",
+      "/assets/library/v5/food_cards/tomato_egg.png",
+      "/assets/p0/food_cards/tomato_egg.jpg",
+      "/assets/tomato_scrambled_egg.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "冬瓜丸子汤",
+    "preferred": "/assets/library/food-clean-v3/winter_melon_pork_meatball_soup.png",
+    "variants": [
+      "/assets/library/food-clean-v3/winter_melon_pork_meatball_soup.png",
+      "/assets/library/food-complete/winter_melon_meatball_boil.png",
+      "/assets/library/food-expansion-24/winter_melon_meatball_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "牛肉汤面",
+    "preferred": "/assets/library/food-combinations/beef_noodle_soup.png",
+    "variants": [
+      "/assets/library/food-combinations/beef_noodle_soup.png",
+      "/assets/library/food-complete/beef_noodles_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "土豆炖牛肉",
+    "preferred": "/assets/library/food-combinations/beef_potato_stew.png",
+    "variants": [
+      "/assets/library/food-combinations/beef_potato_stew.png",
+      "/assets/library/food-complete/beef_potato_braise.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "红烧肉",
+    "preferred": "/assets/library/food-combinations/braised_pork_belly.png",
+    "variants": [
+      "/assets/library/food-combinations/braised_pork_belly.png",
+      "/assets/library/food-complete/pork_belly_braise.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "西兰花炒蘑菇",
+    "preferred": "/assets/library/food-combinations/broccoli_mushroom_stir_fry.png",
+    "variants": [
+      "/assets/library/food-combinations/broccoli_mushroom_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "煎蛋",
+    "preferred": "/assets/library/food-combinations/fried_egg_plate.png",
+    "variants": [
+      "/assets/library/food-combinations/fried_egg_plate.png",
+      "/assets/library/food-complete/egg_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "红烧鸡翅",
+    "preferred": "/assets/library/food-combinations/glazed_chicken_wings.png",
+    "variants": [
+      "/assets/library/food-combinations/glazed_chicken_wings.png",
+      "/assets/library/food-complete/chicken_wings_braise.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "青椒炒蛋",
+    "preferred": "/assets/library/food-combinations/green_pepper_scrambled_eggs.png",
+    "variants": [
+      "/assets/library/food-combinations/green_pepper_scrambled_eggs.png",
+      "/assets/library/food-complete/bell_pepper_egg_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "鸡肉沙拉",
+    "preferred": "/assets/library/food-combinations/grilled_chicken_salad.png",
+    "variants": [
+      "/assets/library/food-combinations/grilled_chicken_salad.png",
+      "/assets/library/food-complete/chicken_lettuce_mix.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "麻婆豆腐",
+    "preferred": "/assets/library/food-combinations/mapo_tofu.png",
+    "variants": [
+      "/assets/library/food-combinations/mapo_tofu.png",
+      "/assets/library/food-complete/tofu_pork_chili_braise.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "南瓜浓汤",
+    "preferred": "/assets/library/food-combinations/pumpkin_soup.png",
+    "variants": [
+      "/assets/library/food-combinations/pumpkin_soup.png",
+      "/assets/library/food-complete/pumpkin_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "香煎三文鱼配芦笋",
+    "preferred": "/assets/library/food-combinations/salmon_asparagus.png",
+    "variants": [
+      "/assets/library/food-combinations/salmon_asparagus.png",
+      "/assets/library/food-complete/salmon_asparagus_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "牛油果虾仁沙拉",
+    "preferred": "/assets/library/food-combinations/shrimp_avocado_salad.png",
+    "variants": [
+      "/assets/library/food-combinations/shrimp_avocado_salad.png",
+      "/assets/library/food-complete/shrimp_avocado_mix.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "米饭",
+    "preferred": "/assets/library/food-combinations/steamed_rice.png",
+    "variants": [
+      "/assets/library/food-combinations/steamed_rice.png",
+      "/assets/library/food-complete/rice_steam.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "番茄意面",
+    "preferred": "/assets/library/food-combinations/tomato_pasta.png",
+    "variants": [
+      "/assets/library/food-combinations/tomato_pasta.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "馄饨汤",
+    "preferred": "/assets/library/food-combinations/wonton_soup.png",
+    "variants": [
+      "/assets/library/food-combinations/wonton_soup.png",
+      "/assets/library/food-complete/wonton_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "包子",
+    "preferred": "/assets/library/food-complete/baozi_steam.png",
+    "variants": [
+      "/assets/library/food-complete/baozi_steam.png",
+      "/assets/library/food-expansion-24/baozi.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "broccoli_mushroom_stir_fry",
+    "preferred": "/assets/library/food-complete/broccoli_mushroom_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/broccoli_mushroom_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "西兰花炒虾仁",
+    "preferred": "/assets/library/food-complete/broccoli_shrimp_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/broccoli_shrimp_stir_fry.png",
+      "/assets/library/food-expansion-24/shrimp_broccoli.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "清炒西兰花",
+    "preferred": "/assets/library/food-complete/broccoli_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/broccoli_stir_fry.png",
+      "/assets/library/food-expansion-24/stir_fried_broccoli.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "宫保鸡丁",
+    "preferred": "/assets/library/food-complete/chicken_peanuts_chili_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/chicken_peanuts_chili_stir_fry.png",
+      "/assets/library/food-expansion-24/kung_pao_chicken.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "corn_pork_boil",
+    "preferred": "/assets/library/food-complete/corn_pork_boil.png",
+    "variants": [
+      "/assets/library/food-complete/corn_pork_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "玉米虾仁",
+    "preferred": "/assets/library/food-complete/corn_shrimp_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/corn_shrimp_stir_fry.png",
+      "/assets/library/food-expansion-24/corn_shrimp.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "煎饺",
+    "preferred": "/assets/library/food-complete/dumpling_pan_fry.png",
+    "variants": [
+      "/assets/library/food-complete/dumpling_pan_fry.png",
+      "/assets/library/food-expansion-24/dumplings.png",
+      "/assets/library/v5/food_cards/gyoza.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "芝士蛋饼",
+    "preferred": "/assets/library/food-complete/egg_cheese_pan_fry.png",
+    "variants": [
+      "/assets/library/food-complete/egg_cheese_pan_fry.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "酸菜鱼",
+    "preferred": "/assets/library/food-complete/fish_pickled_cabbage_boil.png",
+    "variants": [
+      "/assets/library/food-complete/fish_pickled_cabbage_boil.png",
+      "/assets/library/food-expansion-24/sour_cabbage_fish.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "清蒸鱼",
+    "preferred": "/assets/library/food-complete/fish_steam.png",
+    "variants": [
+      "/assets/library/food-complete/fish_steam.png",
+      "/assets/library/food-expansion-24/steamed_fish.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "蒜蓉生菜",
+    "preferred": "/assets/library/food-expansion-24/garlic_lettuce.png",
+    "variants": [
+      "/assets/library/food-expansion-24/garlic_lettuce.png",
+      "/assets/library/food-complete/lettuce_stir_fry.png",
+      "/assets/library/v5/food_cards/garlic_lettuce.png",
+      "/assets/p0/food_cards/garlic_lettuce.jpg"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "拉面",
+    "preferred": "/assets/library/food-complete/noodles_pork_egg_boil.png",
+    "variants": [
+      "/assets/library/food-complete/noodles_pork_egg_boil.png",
+      "/assets/library/food-expansion-24/ramen.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "鱼香肉丝",
+    "preferred": "/assets/library/food-complete/pork_carrot_wood_ear_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/pork_carrot_wood_ear_stir_fry.png",
+      "/assets/library/food-expansion-24/fish_fragrant_pork.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "糖醋里脊",
+    "preferred": "/assets/library/food-complete/pork_deep_fry.png",
+    "variants": [
+      "/assets/library/food-complete/pork_deep_fry.png",
+      "/assets/library/food-expansion-24/sweet_sour_pork.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "炒土豆丝",
+    "preferred": "/assets/library/food-complete/potato_stir_fry.png",
+    "variants": [
+      "/assets/library/food-complete/potato_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "蛋炒饭",
+    "preferred": "/assets/library/food-expansion-24/egg_fried_rice.png",
+    "variants": [
+      "/assets/library/food-expansion-24/egg_fried_rice.png",
+      "/assets/library/food-complete/rice_egg_carrot_stir_fry.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "salmon_pan_fry",
+    "preferred": "/assets/library/food-complete/salmon_pan_fry.png",
+    "variants": [
+      "/assets/library/food-complete/salmon_pan_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "紫菜蛋花汤",
+    "preferred": "/assets/library/food-complete/seaweed_egg_boil.png",
+    "variants": [
+      "/assets/library/food-complete/seaweed_egg_boil.png",
+      "/assets/library/food-expansion-24/seaweed_egg_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "tomato_noodles_boil",
+    "preferred": "/assets/library/food-complete/tomato_noodles_boil.png",
+    "variants": [
+      "/assets/library/food-complete/tomato_noodles_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "tomato_pork_noodles_boil",
+    "preferred": "/assets/library/food-complete/tomato_pork_noodles_boil.png",
+    "variants": [
+      "/assets/library/food-complete/tomato_pork_noodles_boil.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "番茄烧豆腐",
+    "preferred": "/assets/library/food-complete/tomato_tofu_braise.png",
+    "variants": [
+      "/assets/library/food-complete/tomato_tofu_braise.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "天妇罗乌冬",
+    "preferred": "/assets/library/food-complete/udon_shrimp_boil.png",
+    "variants": [
+      "/assets/library/food-complete/udon_shrimp_boil.png",
+      "/assets/library/food-expansion-24/udon_tempura.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "蘑菇意面",
+    "preferred": "/assets/library/food-expansion-24/mushroom_pasta.png",
+    "variants": [
+      "/assets/library/food-expansion-24/mushroom_pasta.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "香煎三文鱼",
+    "preferred": "/assets/library/food-expansion-24/salmon_steak.png",
+    "variants": [
+      "/assets/library/food-expansion-24/salmon_steak.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "番茄肉酱意面",
+    "preferred": "/assets/library/food-expansion-24/spaghetti_bolognese.png",
+    "variants": [
+      "/assets/library/food-expansion-24/spaghetti_bolognese.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "醋溜土豆丝",
+    "preferred": "/assets/library/food-expansion-24/stir_fried_potato.png",
+    "variants": [
+      "/assets/library/food-expansion-24/stir_fried_potato.png"
+    ],
+    "status": "mapped"
+  },
+  {
+    "dish": "croissant",
+    "preferred": "/assets/library/supplement/food_cards/croissant.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/croissant.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "garden_salad",
+    "preferred": "/assets/library/supplement/food_cards/garden_salad.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/garden_salad.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "grilled_steak",
+    "preferred": "/assets/library/supplement/food_cards/grilled_steak.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/grilled_steak.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "mango_dessert",
+    "preferred": "/assets/library/supplement/food_cards/mango_dessert.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/mango_dessert.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "matcha_cake",
+    "preferred": "/assets/library/supplement/food_cards/matcha_cake.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/matcha_cake.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "pancakes",
+    "preferred": "/assets/library/supplement/food_cards/pancakes.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/pancakes.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "poke_bowl",
+    "preferred": "/assets/library/supplement/food_cards/poke_bowl.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/poke_bowl.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "salmon_bento",
+    "preferred": "/assets/library/supplement/food_cards/salmon_bento.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/salmon_bento.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "strawberry_roll_cake",
+    "preferred": "/assets/library/supplement/food_cards/strawberry_roll_cake.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/strawberry_roll_cake.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "sushi_plate",
+    "preferred": "/assets/library/supplement/food_cards/sushi_plate.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/sushi_plate.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "yakitori",
+    "preferred": "/assets/library/supplement/food_cards/yakitori.png",
+    "variants": [
+      "/assets/library/supplement/food_cards/yakitori.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "beef_stir_fry",
+    "preferred": "/assets/library/v5/food_cards/beef_stir_fry.png",
+    "variants": [
+      "/assets/library/v5/food_cards/beef_stir_fry.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "beef_wellington",
+    "preferred": "/assets/library/v5/food_cards/beef_wellington.png",
+    "variants": [
+      "/assets/library/v5/food_cards/beef_wellington.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "caprese_salad",
+    "preferred": "/assets/library/v5/food_cards/caprese_salad.png",
+    "variants": [
+      "/assets/library/v5/food_cards/caprese_salad.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "curry_chicken_rice",
+    "preferred": "/assets/library/v5/food_cards/curry_chicken_rice.png",
+    "variants": [
+      "/assets/library/v5/food_cards/curry_chicken_rice.png",
+      "/assets/p0/food_cards/curry_chicken_rice.jpg"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "fried_chicken",
+    "preferred": "/assets/library/v5/food_cards/fried_chicken.png",
+    "variants": [
+      "/assets/library/v5/food_cards/fried_chicken.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "hotpot",
+    "preferred": "/assets/library/v5/food_cards/hotpot.png",
+    "variants": [
+      "/assets/library/v5/food_cards/hotpot.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "meat_sauce_pasta",
+    "preferred": "/assets/library/v5/food_cards/meat_sauce_pasta.png",
+    "variants": [
+      "/assets/library/v5/food_cards/meat_sauce_pasta.png",
+      "/assets/p0/food_cards/meat_sauce_pasta.jpg"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "miso_soup",
+    "preferred": "/assets/library/v5/food_cards/miso_soup.png",
+    "variants": [
+      "/assets/library/v5/food_cards/miso_soup.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "salmon_steak",
+    "preferred": "/assets/library/v5/food_cards/salmon_steak.png",
+    "variants": [
+      "/assets/library/v5/food_cards/salmon_steak.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "spicy_mapo_tofu",
+    "preferred": "/assets/library/v5/food_cards/spicy_mapo_tofu.png",
+    "variants": [
+      "/assets/library/v5/food_cards/spicy_mapo_tofu.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "stir_fried_bokchoy",
+    "preferred": "/assets/library/v5/food_cards/stir_fried_bokchoy.png",
+    "variants": [
+      "/assets/library/v5/food_cards/stir_fried_bokchoy.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "teriyaki_chicken",
+    "preferred": "/assets/library/v5/food_cards/teriyaki_chicken.png",
+    "variants": [
+      "/assets/library/v5/food_cards/teriyaki_chicken.png"
+    ],
+    "status": "reserve_review_before_use"
+  },
+  {
+    "dish": "tonkotsu_ramen",
+    "preferred": "/assets/library/v5/food_cards/tonkotsu_ramen.png",
+    "variants": [
+      "/assets/library/v5/food_cards/tonkotsu_ramen.png"
+    ],
+    "status": "reserve_review_before_use"
+  }
+]

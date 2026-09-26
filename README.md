@@ -1,3 +1,5 @@
+> **统一主版本**：所有聊天都在当前 `A-basket/` 仓库继续修改。兄弟目录 `yilan/` 和旧压缩包仅作历史参考。统一预览为 http://localhost:4173/preview.html#/basket，修改后刷新整个预览。当前默认请求服务端 DeepSeek；未配置或请求失败时自动使用基础规划。详见 `AGENTS.md`。
+
 # A-basket · 一篮 iPhone 17 V0
 
 依据 `一篮_CodingAgent_Lean_V0_Final` 的规格与 22 页 `all.pdf` 实现。无框架依赖，真实 HTML 组件、CSS 和浏览器状态；没有使用设计截图作为 UI。
@@ -49,37 +51,53 @@ npm test
 
 ## 代码
 
-- `src/data.js`：22 种食材、6 道结构化示例菜、10 类厨具、初始化数据。
+- `src/data.js`：30 道结构化家常菜、食材与厨具目录、初始化数据。
 - `src/domain.js`：数量、硬限制、库存批次、采购事务、FIFO 扣减、幂等和资源排程校验。
 - `src/ai.js`：AIService + MockAdapter + RealAIAdapter。
 - `src/app.js`：路由、组件和交互；`src/style.css`：视觉 tokens 和移动布局。
-- `tests/domain.test.mjs`：14 项业务测试；另有 6 项 AI 网关测试。
+- `tests/domain.test.mjs`：业务与库存测试；另有 AI 网关、排程和升级场景测试（合计 36 项）。
 - `qa/`：浏览器路由检查及视觉截图，仅用于验收，不由应用引用。
 
-## OpenAI 接入
+## DeepSeek 接入
 
-`planBasket()` 与 `recommendRecipes()` 默认通过 RealAIAdapter 请求本机 `/api/ai`。复制 `.env.example` 为 `.env`，仅在本机填写 `OPENAI_API_KEY`；默认模型 `gpt-4.1-mini`。不要把密钥发送到聊天或提交仓库。服务每次读取配置，填好后在页面重试即可。
+`planBasket()`、`recommendRecipes()` 和 `proposeCookingStrategy()` 使用现有 RealAIAdapter，通过同源 `/api/ai` 请求 DeepSeek。模型配置 `deepseek-flash`，API 地址 `https://api.deepseek.com`。本机 `.env` 已备好：只填写 `OPENAI_API_KEY=` 后面的值，保存后重新生成即可，不需要改源码或重启服务。新克隆仓库需先复制 `.env.example` 为 `.env`。
 
-模型使用 [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)，只返回已验证菜谱 ID 与规划取舍。服务端先排除硬性饮食/厨具冲突，再验证 ID、锚点、餐次数量、排序完整性。用量、缺口、库存、事务和教程排程均由程序计算。上下文不含昵称、照片、自由备注；请求只发送本轮偏好、厨房、饮食限制、汇总库存和近期菜谱 ID。
+使用 [DeepSeek JSON 模式](https://api-docs.deepseek.com/guides/json_mode/)，服务端严格校验候选与原因；数量、饮食硬限制、依赖、锅具/灶位和库存事务仍由程序负责。长时偏好、本轮偏好、当顿约束和历史分别组织，图片/昵称/备注不发给文本模型。
 
-缺密钥、超时、认证失败、额度错误或无效模型结果均明确报错，不自动用 Mock 冒充。做饭页仍可浏览明确标为“基础菜谱”的本地库；新食材方案必须成功调用模型。照片候选仍是明确标注的 Mock；教程是本地确定性排程。
+未配置、超时、限流或输出无效时，返回 `meta.source: fallback`，继续体验流程。图片识别仍为 Mock。真实模型返回才标注 `real`，测试中的模拟网络响应不等于真实联调。
 
-请求上下文相同的结果缓存 5 分钟，服务每分钟最多 15 次请求。服务仅监听本机，尚无公网部署/账户鉴权。
+核验：`node scripts/verify-demo.mjs`。结果保存到 `reports/ai-response-examples.json`，仅含示例状态及公开响应；不包含密钥。本轮实际 HTTP 结果为 `configured: false`，三项能力均 fallback，真实 DeepSeek 联调待填写密钥。
 
-`tests/ai-gateway.test.mjs` 使用假的网络响应验证网关边界，不是实际模型联调。本轮检查时 `.env` 尚未配置，真实 OpenAI 调用未验收。
+公开服务保护：每客户端每分钟 15 次、实例每分钟 60 次、4 个模型并发、256 KiB 请求上限、12 秒模型超时、5 分钟缓存、相同请求合并。限流/缓存为单实例内存，反向代理下客户端可能共用额度；不是用户配额/计费系统。
+
+## 生产部署
+
+提供 `render.yaml`，采用支持 Node 的 Web Service；保留 `/api/ai`，不需要重写服务。静态托管不支持 server-side AI，不能作为真实 AI 验收版本。
+
+在 Render 连接这个仓库的 `feature/iphone17-v0` 分支创建 Blueprint，并在私密环境变量 `OPENAI_API_KEY` 填写密钥。其他配置由文件提供，平台分配 `onrender.com` URL。参考 [Render 官方部署说明](https://render.com/docs/deploy-node-express-app) 和 [Blueprint 配置](https://render.com/docs/blueprint-spec)。配置尚在本地，须同步到 GitHub 后才能从远程部署。未创建云服务，也未产生公网 URL。免费实例可能休眠，正式评审前需要验证冷启动和实际调用。
+
+部署后运行 `node scripts/verify-demo.mjs https://实际域名`，确认 status 已配置、两项主能力返回 `meta.source: real`，再将地址交给评委。评委无需登录模型平台或填写密钥。
 
 ## 当前边界
 
 - 单浏览器 localStorage，未接账户、数据库、云同步、多设备或多标签并发事务。
-- Recipe Library 只有 6 道示例菜，未知照片菜名可以存食记，但未关联菜谱的意愿暂不能用于食材规划。
+- Recipe Library 为 30 道常见菜；未知照片菜名可存食记，未关联菜谱的意愿暂不能用于食材规划。
 - 图片识别明确标为 Mock；相机使用浏览器文件/拍照入口，没有自定义取景器。
 - 登录、会员、通知发送、清缓存为未开放说明；资料页仅实现核心昵称、人数，其他设计字段待补。
-- 模型在现有 6 道菜谱内规划与排序；未扩充菜谱库，教程仍按确定性资源排程。
+- 教程基于人工整理的 atomicSteps；时间是预计值，不能保证不同火力、份量和熟练度下完全一致。普通刀、砧板视为基础操作台用具；稀缺锅具按厨房数量排程。
 - 五个核心页面使用提供的 P0 独立素材；未覆盖的食材和菜品使用统一占位，见 MISSING_ASSETS.md。
 - 视觉已逐页检查布局；尚非 22 页 Pixel Perfect。
 
 ## 下一步
 
-1. 填写本机 OpenAI 密钥，实测两类模型请求及完整采购链路。
-2. 对照 `design-qa.md` 补齐长尾素材、手写字体与圆桌细节。
-3. 扩充有来源的结构化菜谱库；不优先做 OCR、云同步、会员。
+1. 填写 DeepSeek 密钥，验收两项主能力真实调用。
+2. 同步分支并连接部署平台，验收公网 `/api/ai`。
+3. 浏览器策略恢复后，复核原子步骤教程的移动端视觉。详见 `reports/AI_UPGRADE_REPORT.md`。
+
+## 产品逻辑优化（2026-09-26）
+
+逐项带入库存、周期整体吃法、当顿菜系/口味筛选、经校验的缺料适配、牛奶包装单位、常备调料状态已接入现有流程。用户页面不显示文本 AI fallback 技术状态，诊断保留在接口 meta。51 项测试通过，浏览器截图检查因策略验证不可用而未完成。细节和限制见 [产品逻辑验收报告](reports/PRODUCT_LOGIC_PASS.md)。
+
+### 厨房先适配（补充）
+
+采购主清单只保留已填好数量的正数项目；现有食材优先只推荐直接能做或适配后能做的菜。明确选择「可以补买 1–2 样」才显示小额缺料候选，并自动生成整餐补买清单。菠菜/生菜替换会同步菜名、素材、步骤和实际扣减，等价菜卡去重。AI 可选择适合的已验证适配候选，程序校验 adaptationCodes、库存与硬限制；不放宽库存政策来假装命中口味。64 项自动测试通过，并实测本机 HTTP 的库存筛选、补买数量和正数采购清单。

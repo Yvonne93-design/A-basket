@@ -1,0 +1,247 @@
+{
+  "name": "YILAN Visual Asset Supplement CLEAN v1",
+  "type": "supplement_only",
+  "total_assets": 32,
+  "categories": {
+    "ingredients": 7,
+    "cookware": 6,
+    "food_cards": 11,
+    "decorative": 8
+  },
+  "duplicates_with_v5_by_filename": [],
+  "export": {
+    "format": "PNG",
+    "size": "512x512",
+    "background": "transparent",
+    "max_subject_ratio": 0.7,
+    "safe_margin_target": ">=15%"
+  },
+  "qa_margins_px": {
+    "ingredients/white_fish.png": {
+      "left": 168,
+      "right": 168,
+      "top": 203,
+      "bottom": 198
+    },
+    "ingredients/squid.png": {
+      "left": 176,
+      "right": 176,
+      "top": 193,
+      "bottom": 189
+    },
+    "ingredients/asparagus.png": {
+      "left": 170,
+      "right": 171,
+      "top": 193,
+      "bottom": 204
+    },
+    "ingredients/shrimp.png": {
+      "left": 194,
+      "right": 180,
+      "top": 205,
+      "bottom": 208
+    },
+    "ingredients/napa_cabbage.png": {
+      "left": 197,
+      "right": 189,
+      "top": 203,
+      "bottom": 203
+    },
+    "ingredients/sweet_potato.png": {
+      "left": 202,
+      "right": 212,
+      "top": 197,
+      "bottom": 206
+    },
+    "ingredients/avocado.png": {
+      "left": 219,
+      "right": 219,
+      "top": 208,
+      "bottom": 217
+    },
+    "cookware/blender.png": {
+      "left": 217,
+      "right": 219,
+      "top": 177,
+      "bottom": 188
+    },
+    "cookware/whisk.png": {
+      "left": 194,
+      "right": 194,
+      "top": 193,
+      "bottom": 194
+    },
+    "cookware/tongs.png": {
+      "left": 193,
+      "right": 194,
+      "top": 194,
+      "bottom": 195
+    },
+    "cookware/wooden_spoon.png": {
+      "left": 199,
+      "right": 200,
+      "top": 185,
+      "bottom": 180
+    },
+    "cookware/measuring_cup.png": {
+      "left": 198,
+      "right": 200,
+      "top": 201,
+      "bottom": 207
+    },
+    "cookware/toaster.png": {
+      "left": 198,
+      "right": 197,
+      "top": 198,
+      "bottom": 200
+    },
+    "food_cards/garden_salad.png": {
+      "left": 174,
+      "right": 174,
+      "top": 183,
+      "bottom": 197
+    },
+    "food_cards/grilled_steak.png": {
+      "left": 180,
+      "right": 187,
+      "top": 199,
+      "bottom": 200
+    },
+    "food_cards/salmon_bento.png": {
+      "left": 160,
+      "right": 158,
+      "top": 180,
+      "bottom": 181
+    },
+    "food_cards/poke_bowl.png": {
+      "left": 166,
+      "right": 167,
+      "top": 184,
+      "bottom": 185
+    },
+    "food_cards/strawberry_roll_cake.png": {
+      "left": 173,
+      "right": 187,
+      "top": 188,
+      "bottom": 202
+    },
+    "food_cards/croissant.png": {
+      "left": 170,
+      "right": 178,
+      "top": 204,
+      "bottom": 204
+    },
+    "food_cards/mango_dessert.png": {
+      "left": 198,
+      "right": 199,
+      "top": 205,
+      "bottom": 205
+    },
+    "food_cards/matcha_cake.png": {
+      "left": 191,
+      "right": 182,
+      "top": 204,
+      "bottom": 205
+    },
+    "food_cards/pancakes.png": {
+      "left": 181,
+      "right": 181,
+      "top": 205,
+      "bottom": 191
+    },
+    "food_cards/sushi_plate.png": {
+      "left": 180,
+      "right": 167,
+      "top": 192,
+      "bottom": 206
+    },
+    "food_cards/yakitori.png": {
+      "left": 183,
+      "right": 177,
+      "top": 207,
+      "bottom": 208
+    },
+    "decorative/flower_pot.png": {
+      "left": 212,
+      "right": 199,
+      "top": 194,
+      "bottom": 207
+    },
+    "decorative/chalkboard.png": {
+      "left": 205,
+      "right": 194,
+      "top": 203,
+      "bottom": 189
+    },
+    "decorative/chair.png": {
+      "left": 192,
+      "right": 192,
+      "top": 189,
+      "bottom": 190
+    },
+    "decorative/sprout.png": {
+      "left": 217,
+      "right": 222,
+      "top": 215,
+      "bottom": 215
+    },
+    "decorative/grocery_bag.png": {
+      "left": 212,
+      "right": 213,
+      "top": 202,
+      "bottom": 191
+    },
+    "decorative/recipe_note.png": {
+      "left": 208,
+      "right": 208,
+      "top": 198,
+      "bottom": 198
+    },
+    "decorative/flower_bouquet.png": {
+      "left": 207,
+      "right": 214,
+      "top": 204,
+      "bottom": 196
+    },
+    "decorative/oven_mitt.png": {
+      "left": 207,
+      "right": 208,
+      "top": 204,
+      "bottom": 199
+    }
+  },
+  "files": [
+    "ingredients/white_fish.png",
+    "ingredients/squid.png",
+    "ingredients/asparagus.png",
+    "ingredients/shrimp.png",
+    "ingredients/napa_cabbage.png",
+    "ingredients/sweet_potato.png",
+    "ingredients/avocado.png",
+    "cookware/blender.png",
+    "cookware/whisk.png",
+    "cookware/tongs.png",
+    "cookware/wooden_spoon.png",
+    "cookware/measuring_cup.png",
+    "cookware/toaster.png",
+    "food_cards/garden_salad.png",
+    "food_cards/grilled_steak.png",
+    "food_cards/salmon_bento.png",
+    "food_cards/poke_bowl.png",
+    "food_cards/strawberry_roll_cake.png",
+    "food_cards/croissant.png",
+    "food_cards/mango_dessert.png",
+    "food_cards/matcha_cake.png",
+    "food_cards/pancakes.png",
+    "food_cards/sushi_plate.png",
+    "food_cards/yakitori.png",
+    "decorative/flower_pot.png",
+    "decorative/chalkboard.png",
+    "decorative/chair.png",
+    "decorative/sprout.png",
+    "decorative/grocery_bag.png",
+    "decorative/recipe_note.png",
+    "decorative/flower_bouquet.png",
+    "decorative/oven_mitt.png"
+  ]
+}

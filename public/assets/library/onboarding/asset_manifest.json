@@ -1,0 +1,57 @@
+{
+  "source": "user-provided UI screenshot",
+  "format": "PNG with transparent background",
+  "ui_text_removed": true,
+  "assets": [
+    {
+      "file": "illustration_vegetable_basket.png",
+      "name_zh": "蔬菜篮插画",
+      "usage": "welcome/summary hero illustration"
+    },
+    {
+      "file": "cookware_wok.png",
+      "name_zh": "炒锅",
+      "usage": "cookware option icon"
+    },
+    {
+      "file": "cookware_stock_pot.png",
+      "name_zh": "汤锅",
+      "usage": "cookware option icon"
+    },
+    {
+      "file": "cookware_frying_pan.png",
+      "name_zh": "平底锅",
+      "usage": "cookware option icon"
+    },
+    {
+      "file": "cookware_steamer.png",
+      "name_zh": "蒸锅",
+      "usage": "cookware option icon"
+    },
+    {
+      "file": "appliance_rice_cooker.png",
+      "name_zh": "电饭煲",
+      "usage": "kitchen appliance option icon"
+    },
+    {
+      "file": "appliance_oven.png",
+      "name_zh": "烤箱",
+      "usage": "kitchen appliance option icon"
+    },
+    {
+      "file": "appliance_air_fryer.png",
+      "name_zh": "空气炸锅",
+      "usage": "kitchen appliance option icon"
+    },
+    {
+      "file": "appliance_microwave.png",
+      "name_zh": "微波炉",
+      "usage": "kitchen appliance option icon"
+    },
+    {
+      "file": "appliance_blender.png",
+      "name_zh": "料理机",
+      "usage": "kitchen appliance option icon"
+    }
+  ]
+}

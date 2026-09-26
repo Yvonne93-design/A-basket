@@ -1,0 +1,31 @@
+﻿recipe_id,菜名,状态,唯一图片路径,说明
+tomato_scrambled_egg,番茄炒蛋,已匹配,/assets/library/food-clean-v3/tomato_egg_stir_fry.png,完整透明新图
+garlic_lettuce,蒜蓉生菜,已匹配,/assets/library/food-expansion-24/garlic_lettuce.png,旧包完整盛盘生菜；不使用新包青菜替代
+miso_tofu_soup,香菇豆腐汤,已匹配,/assets/library/food-combinations/mushroom_tofu_soup.png,旧包香菇与豆腐准确对应
+teriyaki_chicken_rice,照烧鸡肉饭,已匹配,/assets/library/food-19-complete/teriyaki_chicken_rice.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+creamy_mushroom_pasta,奶香蘑菇面,已匹配,/assets/library/food-clean-v3/mushroom_cream_pasta.png,完整透明奶香蘑菇面
+potato_egg,土豆炒鸡蛋,已匹配,/assets/library/food-20260926/food_cards/potato_egg.png,保留旧包准确组合
+cucumber_salad,拍黄瓜,已匹配,/assets/library/food-19-complete/cucumber_salad.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+garlic_spinach,蒜蓉菠菜,已匹配,/assets/library/food-19-complete/garlic_spinach.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+broccoli_garlic,蒜蓉西兰花,已匹配,/assets/library/food-19-complete/broccoli_garlic.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+vinegar_potato,醋溜土豆丝,已匹配,/assets/library/food-expansion-24/stir_fried_potato.png,旧包土豆丝与做法相符
+pepper_pork,青椒炒肉,已匹配,/assets/library/food-19-complete/pepper_pork.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+tomato_tofu,番茄烧豆腐,已匹配,/assets/library/food-complete/tomato_tofu_braise.png,旧完整库番茄豆腐对应；完整透明食物主体
+mushroom_chicken,香菇焖鸡,已匹配,/assets/library/food-19-complete/mushroom_chicken.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+corn_pork_soup,玉米肉片汤,已匹配,/assets/library/food-19-complete/corn_pork_soup.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+tomato_egg_soup,番茄蛋花汤,已匹配,/assets/library/food-clean-v3/tomato_egg_soup.png,完整透明新图
+egg_fried_rice,蛋炒饭,已匹配,/assets/library/food-expansion-24/egg_fried_rice.png,旧包蛋炒饭；不使用新包虾仁炒饭
+steamed_egg,蒸水蛋,已匹配,/assets/library/food-19-complete/steamed_egg.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+onion_beef_style_pork,洋葱炒肉片,已匹配,/assets/library/food-19-complete/onion_beef_style_pork.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用；洋葱炒猪肉片，非牛肉
+oyakodon,亲子丼,已匹配,/assets/library/food-19-complete/oyakodon.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+japanese_potato_stew,日式土豆炖肉,已匹配,/assets/library/food-19-complete/japanese_potato_stew.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+butter_mushroom,黄油炒蘑菇,已匹配,/assets/library/food-clean-v3/mushroom_stir_fry.png,完整透明蘑菇炒制图，黄油不改变主要可见食材
+tofu_egg_rice,豆腐鸡蛋盖饭,已匹配,/assets/library/food-19-complete/tofu_egg_rice.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+kimchi_fried_rice,泡菜炒饭,已匹配,/assets/library/food-19-complete/kimchi_fried_rice.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+korean_tofu_soup,韩式豆腐汤,已匹配,/assets/library/food-19-complete/korean_tofu_soup.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+korean_potato,韩式酱烧土豆,已匹配,/assets/library/food-19-complete/korean_potato.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+tomato_pasta,番茄意面,已匹配,/assets/library/food-19-complete/tomato_pasta.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+cheese_omelette,芝士蛋饼,已匹配,/assets/library/food-complete/egg_cheese_pan_fry.png,旧完整库芝士蛋饼对应
+potato_soup,土豆浓汤,已匹配,/assets/library/food-19-complete/potato_soup.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+vegetable_noodles,青菜鸡蛋面,已匹配,/assets/library/food-19-complete/vegetable_noodles.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+cucumber_egg,黄瓜炒鸡蛋,已匹配,/assets/library/food-19-complete/cucumber_egg.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
