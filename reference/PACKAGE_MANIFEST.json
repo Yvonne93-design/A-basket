@@ -1,0 +1,19 @@
+{
+  "package": "一篮_CodingAgent_Lean_Final",
+  "visualSource": "design/source/all.pdf",
+  "screens": 22,
+  "screenRule": "1 PDF page = 1 complete screen; no further cropping",
+  "readOrder": [
+    "00_READ_FIRST.md",
+    "01_PRODUCT_SPEC.md",
+    "02_SCREEN_MAP.csv",
+    "03_AI_DATA_SPEC.md",
+    "04_VISUAL_IMPLEMENTATION.md",
+    "05_AI_CONTRACTS.json",
+    "06_STATE_MODEL.json",
+    "07_ACCEPTANCE.md",
+    "08_BUILD_ORDER.md",
+    "design/source/all.pdf"
+  ],
+  "executionPrompt": "09_AGENT_PROMPT.txt"
+}

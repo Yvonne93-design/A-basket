@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "rule": "AI output is candidate until deterministic validation + user confirmation.",
+  "planBasket": {
+    "input": [
+      "cycle",
+      "confirmedStock",
+      "kitchen",
+      "dietConstraints",
+      "anchorDishIds"
+    ],
+    "output": {
+      "referenceRecipeIds": "string[]",
+      "ingredientSuggestions": "IngredientSuggestion[]",
+      "tradeoffs": "Tradeoff[]"
+    }
+  },
+  "recommendRecipes": {
+    "input": [
+      "confirmedStock",
+      "cycleContext",
+      "recentEatenRecipeIds",
+      "mealSession",
+      "kitchen"
+    ],
+    "output": {
+      "recipeCards": "{recipeId,canCookNow,missingIngredients,reasonCodes,shortReason}[]"
+    }
+  },
+  "parseReceiptOrIngredientPhoto": {
+    "input": [
+      "image"
+    ],
+    "output": {
+      "items": "{rawText?,ingredientIdCandidate?,nameCandidate,qtyCandidate?,unitCandidate?,confidence}[]"
+    }
+  },
+  "parseDishPhoto": {
+    "input": [
+      "image"
+    ],
+    "output": {
+      "dishNameCandidates": "string[]",
+      "styleTags": "string[]",
+      "linkedRecipeCandidates": "string[]"
+    }
+  },
+  "parseKitchenPhoto": {
+    "input": [
+      "image"
+    ],
+    "output": {
+      "toolCandidates": "{type,name,quantityCandidate,confidence}[]",
+      "stoveSlotsCandidate": "number|null"
+    }
+  },
+  "generateCookingPlan": {
+    "input": [
+      "recipeIds",
+      "diners",
+      "stock",
+      "kitchen",
+      "instantConstraints"
+    ],
+    "output": {
+      "estimatedTotalMinutes": "number",
+      "strategyTags": "string[]",
+      "stages": "CookingStage[]"
+    }
+  }
+}

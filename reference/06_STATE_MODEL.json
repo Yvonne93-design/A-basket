@@ -1,0 +1,61 @@
+{
+  "purchase": {
+    "states": [
+      "suggested",
+      "shopping",
+      "bought",
+      "stock"
+    ],
+    "commitRule": "stock only after user confirms actual purchased quantity"
+  },
+  "meal": {
+    "states": [
+      "browsing",
+      "selected",
+      "cooking",
+      "completed"
+    ],
+    "inventoryRule": "deduct only once after completed + confirmed actual usage"
+  },
+  "vision": {
+    "states": [
+      "uploaded",
+      "parsed_candidate",
+      "user_confirmed",
+      "committed"
+    ]
+  },
+  "context": {
+    "longTerm": [
+      "defaultDiners",
+      "kitchen",
+      "allergies",
+      "absoluteAvoids"
+    ],
+    "cycle": [
+      "plannedDays",
+      "expectedMeals",
+      "styles",
+      "substyles",
+      "anchorDishIds",
+      "habits",
+      "carryOver"
+    ],
+    "instant": [
+      "diners",
+      "mealType",
+      "flavor",
+      "timeLimit",
+      "operationPrefs",
+      "selectedRecipeIds"
+    ]
+  },
+  "invariants": [
+    "stock qty never negative",
+    "AI suggestion never writes stock directly",
+    "selected recipe never deducts stock",
+    "same completion request is idempotent",
+    "instant preference never auto-overwrites cycle/long-term context",
+    "image parse requires user confirmation before commit"
+  ]
+}

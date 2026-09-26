@@ -1,0 +1,66 @@
+{
+  "profile": {
+    "nickname": "Demo User",
+    "defaultDiners": 2,
+    "allergies": [],
+    "absoluteAvoids": []
+  },
+  "kitchen": {
+    "stoveSlots": 2,
+    "tools": [
+      {
+        "id": "wok",
+        "name": "炒锅",
+        "qty": 1,
+        "available": true
+      },
+      {
+        "id": "stockpot",
+        "name": "汤锅",
+        "qty": 1,
+        "available": true
+      },
+      {
+        "id": "rice-cooker",
+        "name": "电饭煲",
+        "qty": 1,
+        "available": true
+      }
+    ]
+  },
+  "stock": [
+    {
+      "id": "lot-tomato",
+      "ingredientId": "tomato",
+      "qty": 3,
+      "unit": "个",
+      "status": "available"
+    },
+    {
+      "id": "lot-egg",
+      "ingredientId": "egg",
+      "qty": 6,
+      "unit": "个",
+      "status": "available"
+    }
+  ],
+  "cycle": {
+    "plannedDays": 5,
+    "expectedMeals": 3,
+    "styles": [
+      "中式",
+      "日式"
+    ],
+    "substyles": [
+      "家常",
+      "盖饭"
+    ],
+    "anchorWantedDishIds": [
+      "wanted-tonkotsu"
+    ],
+    "habits": [
+      "少洗锅"
+    ],
+    "carryOverEnabled": true
+  }
+}
