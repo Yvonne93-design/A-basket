@@ -1,0 +1,14 @@
+/* Font-only trial on the four top-level routes. Existing geometry and colors stay in their original stylesheets. */
+@font-face{font-family:'LXGW WenKai';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/LXGWWenKai-Regular.ttf') format('truetype')}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/NotoSansSC-Regular.ttf') format('truetype')}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/NotoSansSC-Medium.ttf') format('truetype')}
+.typography-preview,.typography-preview :where(*){font-family:'Noto Sans SC','Source Han Sans SC',sans-serif!important}
+.typography-preview{font-size:14px;font-weight:400}
+.typography-preview .header h1,.typography-preview .header .brand,.typography-preview .journal-title{font-family:'LXGW WenKai','Noto Sans SC','Source Han Sans SC',sans-serif!important;font-size:32px!important;font-weight:400!important}
+.typography-preview h2,.typography-preview .section h2,.typography-preview .section>h3,.typography-preview .period-heading h3{font-size:18px!important;font-weight:500!important}
+.typography-preview h3,.typography-preview .food-card h2,.typography-preview .stock-attention h3,.typography-preview .ingredient-tile h3,.typography-preview .journal-card h3{font-size:16px!important;font-weight:500!important}
+.typography-preview p,.typography-preview .note,.typography-preview .menu-item,.typography-preview label{font-size:14px!important;font-weight:400!important}
+.typography-preview small,.typography-preview .badge,.typography-preview .ai-state,.typography-preview .ai-state span,.typography-preview .footer-note,.typography-preview .cycle-metrics small,.typography-preview .cycle-metrics b,.typography-preview .cycle-metrics b em,.typography-preview .needs h3,.typography-preview .needs small,.typography-preview .table-label{font-size:12px!important;font-weight:400!important}
+.typography-preview button,.typography-preview .button,.typography-preview .chip,.typography-preview .tabs a,.typography-preview .action,.typography-preview .text-button,.typography-preview .action-strip a{font-weight:500!important}
+.typography-preview .basket-greeting{font-family:'LXGW WenKai','Noto Sans SC','Source Han Sans SC',sans-serif!important;font-weight:400!important}
+.app:has(>.typography-preview)>.nav{font-family:'Noto Sans SC','Source Han Sans SC',sans-serif;font-weight:500}

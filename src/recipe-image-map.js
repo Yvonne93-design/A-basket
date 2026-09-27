@@ -37,8 +37,8 @@ export const recipeImageMap = {
   },
   "garlic_spinach": {
     "name": "蒜蓉菠菜",
-    "src": "/assets/library/food-19-complete/garlic_spinach.png",
-    "note": "按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用"
+    "src": "/assets/library/food-fixed-dishes/garlic_spinach_complete.png",
+    "note": "用户指定完整盘沿替换图，原始透明 PNG，contain 显示"
   },
   "broccoli_garlic": {
     "name": "蒜蓉西兰花",
@@ -47,8 +47,8 @@ export const recipeImageMap = {
   },
   "vinegar_potato": {
     "name": "醋溜土豆丝",
-    "src": "/assets/library/food-expansion-24/stir_fried_potato.png",
-    "note": "旧包土豆丝与做法相符"
+    "src": "/assets/library/food-fixed-dishes/potato_stir_fry_complete.png",
+    "note": "用户指定完整盘沿替换图，原始透明 PNG，contain 显示"
   },
   "pepper_pork": {
     "name": "青椒炒肉",

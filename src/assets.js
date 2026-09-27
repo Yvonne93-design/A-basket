@@ -8,6 +8,7 @@ export const glyph=(name,cls='')=>`<img class="ui-icon ${cls}" src="/assets/icon
 export function libraryArt(key,cls='',alt=''){const a=assetLibrary[key];return a?`<span class="asset-picture ${cls}" style="--asset-scale:${a.scale}"><img src="${a.src}" alt="${escapeHtml(alt)}"></span>`:'';}
 const ingredientMap=Object.fromEntries(['tomato','egg','spinach','carrot','onion','potato','cucumber','mushroom','tofu','pork','broccoli','corn','garlic','rice'].map(id=>[id,`v5/ingredients/${id}`]));
 for(const id of ['chicken','milk','scallion','noodles','cooking_oil','soy','salt'])ingredientMap[id]=`food-20260926/ingredients/${id}`;
+ingredientMap.vinegar='ingredients/vinegar';
 export const ingredientAssets=new Set([...Object.keys(ingredientMap),'lettuce']);
 const ingredientSymbols={salt:'jar',cooking_oil:'drop',scallion:'plant',noodles:'bowl-food',chicken:'cooking-pot',milk:'drop',soy:'jar'};
 export function ingredientArt(id){return `<span class="ingredient-icon ${ingredientAssets.has(id)?'has-art':'missing-art'}">${ingredientMap[id]?libraryArt(ingredientMap[id],'',ingredients[id].name):id==='lettuce'?`<img src="/assets/p0/ingredients/lettuce.png" alt="生菜">`:glyph(ingredientSymbols[id]||'plant')}</span>`;}

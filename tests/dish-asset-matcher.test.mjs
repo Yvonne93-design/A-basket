@@ -26,7 +26,7 @@ test('all 19 supplied CSV names match the exact recipe and asset filename',async
  const {journalVisual}=await import('../src/journal-visual.js');
  const {renderTutorialComponents}=await import('../src/tutorial-components.js');
  const rows=readFileSync(new URL('../public/assets/library/food-19-complete/mapping.csv',import.meta.url),'utf8').trim().split(/\r?\n/).slice(1);assert.equal(rows.length,19);
- for(const line of rows){const [name,file]=line.split(','),id=file.replace(/\.png$/,''),r=recipes.find(r=>r.id===id),src='/assets/library/food-19-complete/'+file;
+ for(const line of rows){const [name,file]=line.split(','),id=file.replace(/\.png$/,''),r=recipes.find(r=>r.id===id),src=id==='garlic_spinach'?'/assets/library/food-fixed-dishes/garlic_spinach_complete.png':'/assets/library/food-19-complete/'+file;
   assert.equal(r.name,name);assert.equal(recipeImageMap[id].src,src);assert.ok(foodArt(r).includes(src));assert.ok(journalVisual({recipeIds:[id]}).includes(src));
   const html=renderTutorialComponents({adaptedRecipes:[r],atomicTimeline:[],ingredientNeeds:[],estimatedMinutes:r.totalTime},{diners:2,quantityLabel:()=>''});assert.ok(html.includes(src));
  }

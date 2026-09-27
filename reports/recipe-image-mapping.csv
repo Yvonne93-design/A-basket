@@ -6,9 +6,9 @@ teriyaki_chicken_rice,照烧鸡肉饭,已匹配,/assets/library/food-19-complete
 creamy_mushroom_pasta,奶香蘑菇面,已匹配,/assets/library/food-clean-v3/mushroom_cream_pasta.png,完整透明奶香蘑菇面
 potato_egg,土豆炒鸡蛋,已匹配,/assets/library/food-20260926/food_cards/potato_egg.png,保留旧包准确组合
 cucumber_salad,拍黄瓜,已匹配,/assets/library/food-19-complete/cucumber_salad.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
-garlic_spinach,蒜蓉菠菜,已匹配,/assets/library/food-19-complete/garlic_spinach.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
+garlic_spinach,蒜蓉菠菜,已匹配,/assets/library/food-fixed-dishes/garlic_spinach_complete.png,用户指定完整盘沿替换图，原始透明 PNG，contain 显示
 broccoli_garlic,蒜蓉西兰花,已匹配,/assets/library/food-19-complete/broccoli_garlic.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
-vinegar_potato,醋溜土豆丝,已匹配,/assets/library/food-expansion-24/stir_fried_potato.png,旧包土豆丝与做法相符
+vinegar_potato,醋溜土豆丝,已匹配,/assets/library/food-fixed-dishes/potato_stir_fry_complete.png,用户指定完整盘沿替换图，原始透明 PNG，contain 显示
 pepper_pork,青椒炒肉,已匹配,/assets/library/food-19-complete/pepper_pork.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用
 tomato_tofu,番茄烧豆腐,已匹配,/assets/library/food-complete/tomato_tofu_braise.png,旧完整库番茄豆腐对应；完整透明食物主体
 mushroom_chicken,香菇焖鸡,已匹配,/assets/library/food-19-complete/mushroom_chicken.png,按 food-19-complete/mapping.csv 对应；透明 PNG 原样使用

@@ -68,7 +68,6 @@
 .journal-hero{position:relative;height:205px;margin:-4px -8px 0;overflow:hidden}
 .journal-hero .header{position:relative;z-index:1;align-items:flex-start;padding:3px 8px;margin:0}
 .journal-title{display:inline-block;font:700 53px/1.15 'Kaiti SC','STKaiti','Songti SC',serif;color:#35472e;text-decoration:none;position:relative;letter-spacing:3px}
-.journal-title:after{content:'';position:absolute;bottom:-6px;left:0;width:92%;height:5px;border-radius:80%;background:#df9566;transform:rotate(-9deg)}
 .journal-hero .header .action{font-size:13px;font-weight:500;color:#64774a;padding:6px 10px;border:1px solid #91a17c;border-radius:16px;margin-top:3px}
 .journal-hero-art{position:absolute;width:100%;height:auto;left:0;bottom:-54px;pointer-events:none}
 .journal-tabs{position:relative;margin:0 0 14px;padding:3px;border-radius:25px;background:#eae9dfb3;gap:5px}
@@ -335,3 +334,22 @@
 .journal-meal-images figure{min-width:0;margin:0}
 .journal-card .journal-meal-images .food-image{height:86px;background:transparent}
 .journal-meal-images .dish-placeholder{font-size:9px}
+/* Reserve a stable status area so selection feedback cannot push the table down. */
+.cook-page{overflow-anchor:none}
+.cook-page .food-card-status{display:grid;grid-template-rows:20px 38px;gap:2px;margin-top:9px}
+.cook-page .food-card-status .dish-availability{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:19px}
+.cook-page .food-card .heart{display:grid;place-items:center;width:35px;height:35px;min-height:35px;padding:0;line-height:1}
+.cook-page .food-card .heart .ui-icon{display:block;width:20px;height:20px;margin:0}
+.cook-page .food-card .heart[aria-disabled="true"] .ui-icon{opacity:.4}
+
+/* Preparation reads vertically in compact groups, with the validated instructions intact. */
+.tutorial-prep-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;overflow:visible;scroll-snap-type:none;padding:3px 0 8px}
+.tutorial-prep-card{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:start;padding:10px;scroll-snap-align:none}
+.tutorial-prep-card .tutorial-state-art{aspect-ratio:1}
+.tutorial-prep-copy h3{margin:0 0 5px;font-size:14px}
+.tutorial-prep-copy p{font-size:12px;line-height:1.7}
+
+/* Quiet paper labels on the table; retain the existing plate positions. */
+.cook-page .round-table .table-dish h3{position:relative;isolation:isolate;background:none;border:0;border-radius:0;box-shadow:none;line-height:24px}
+.cook-page.typography-preview .round-table .table-dish h3{font-size:12px!important;font-weight:500!important;letter-spacing:.2px}
+.cook-page .round-table .table-dish h3::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;border:6px solid transparent;border-image:url('/assets/library/deckled-paper.png') 65 fill / 6px / 0 stretch;filter:drop-shadow(0 1px 1px #735c3514)}
