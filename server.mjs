@@ -5,7 +5,7 @@ import path from 'node:path';
 import {createAIGateway,readAIConfig,AIError} from './server/ai-gateway.js';
 const root=fileURLToPath(new URL('.',import.meta.url));
 const runAI=createAIGateway();
-const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.woff2':'font/woff2','.ttf':'font/ttf'};
 const json=(res,status,value)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(value));};
 const rates=[];const clientRates=new Map();
 export const server=http.createServer(async(req,res)=>{

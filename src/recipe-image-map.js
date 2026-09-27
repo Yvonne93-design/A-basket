@@ -7,8 +7,8 @@ export const recipeImageMap = {
   },
   "garlic_lettuce": {
     "name": "蒜蓉生菜",
-    "src": "/assets/library/food-expansion-24/garlic_lettuce.png",
-    "note": "旧包完整盛盘生菜；不使用新包青菜替代"
+    "src": "/assets/library/food-fixed-dishes/garlic_spinach_complete.png",
+    "note": "用户确认用于修复蒜蓉生菜截断盘底的完整补图，原始透明 PNG"
   },
   "miso_tofu_soup": {
     "name": "香菇豆腐汤",

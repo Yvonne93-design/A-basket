@@ -1,3 +1,4 @@
+import {stepActionCode} from './action-assets.js';
 import {adaptedRecipe,mealAdaptation} from './food-rules.js';
 import {recipes} from './data.js';
 const overlap=(a,b)=>a.start<b.end&&b.start<a.end;
@@ -30,7 +31,7 @@ function schedule(state,selected,strategy,merge=true){
    for(const lane of lanes)for(const slot of stove){let start=earliest;for(;start<10000;start++){if([lane,slot].filter(Boolean).some(x=>!free(x,start,start+u.duration)))continue;if(u.steps.some(s=>s.handsOn&&!free('hands',start+s.offset,start+s.offset+s.duration)))continue;break;}if(start>=10000)fail('无法安排资源');const cost=start+(strategy.priority==='less_cleanup'&&lane&&!reservations.has(lane)?10000:0);if(!best||cost<best.cost)best={u,start,lane,slot,cost};}return best;});
   candidates.sort((a,b)=>a.cost-b.cost||strategy.preferredOrder.indexOf(a.u.steps[0].recipeId)-strategy.preferredOrder.indexOf(b.u.steps[0].recipeId)||a.u.id.localeCompare(b.u.id));const {u,start,lane,slot}=candidates[0];
   for(const resource of [lane,slot].filter(Boolean))reserve(resource,start,start+u.duration);
-  for(const s of u.steps){const begin=start+s.offset,end=begin+s.duration;if(s.handsOn)reserve('hands',begin,end);ends.set(s.id,end);timeline.push({...s,start:begin,end,toolLane:lane,stoveLane:slot,resource:slot?`灶位 ${slot.split('#')[1]} · ${state.kitchen.tools.find(t=>t.id===u.tool).name}`:lane?state.kitchen.tools.find(t=>t.id===u.tool).name:'操作台',kind:['wash','prep'].includes(s.phase)?'prep':s.phase==='finish'?'finish':s.handsOn?'heat':'wait',text:s.instruction,title:s.instruction.split(/[，。；]/)[0]});}
+  for(const s of u.steps){const begin=start+s.offset,end=begin+s.duration;if(s.handsOn)reserve('hands',begin,end);ends.set(s.id,end);timeline.push({...s,actionCode:stepActionCode(s),start:begin,end,toolLane:lane,stoveLane:slot,resource:slot?`灶位 ${slot.split('#')[1]} · ${state.kitchen.tools.find(t=>t.id===u.tool).name}`:lane?state.kitchen.tools.find(t=>t.id===u.tool).name:'操作台',kind:['wash','prep'].includes(s.phase)?'prep':s.phase==='finish'?'finish':s.handsOn?'heat':'wait',text:s.instruction,title:s.instruction.split(/[，。；]/)[0]});}
   remaining.splice(remaining.indexOf(u),1);
  }
  const end=Math.max(...timeline.map(s=>s.end));return {timeline:timeline.sort((a,b)=>a.start-b.start||a.id.localeCompare(b.id)),end,reservations};

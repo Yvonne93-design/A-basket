@@ -1,0 +1,24 @@
+/* Supplied welcome art, isolated to the entry screen. */
+.page.onboarding-page:has(.onboarding-welcome){padding:20px 32px 130px;background:#fcfaf2;min-height:100dvh}
+.onboarding-welcome{position:static;padding:0!important;color:#353d2d}
+.onboarding-welcome .welcome-hero{height:246px;margin:0 -20px 12px;display:flex;align-items:flex-end;justify-content:center}
+.welcome-basket-art{width:100%;height:220px;background:url('/assets/library/onboarding/welcome-basket-sheet.png') 50% 0/100% auto no-repeat}
+.onboarding-welcome h1{font-family:'LXGW WenKai','Noto Sans SC',sans-serif;font-size:32px;font-weight:400;line-height:1.35;letter-spacing:1px}
+.onboarding-welcome .welcome-subtitle{font-family:'Noto Sans SC',sans-serif;font-size:13px;letter-spacing:1.5px;color:#8b8a81;margin:12px 0 27px;line-height:1.7}
+.onboarding-welcome .login-options{gap:10px}
+.onboarding-welcome .login-options .button{height:44px;min-height:44px;border-radius:24px;font-size:15px;font-weight:400;box-shadow:none;gap:10px}
+.onboarding-welcome .login-phone{background:#fffefd;color:#85857f;border:1px solid #d6d0c5}
+.onboarding-welcome .login-wechat{background:#66774b;color:#fff}
+.onboarding-welcome .login-apple{background:#4c473b;color:#fff}
+.onboarding-welcome .login-options .ui-icon{width:23px;height:23px;opacity:1}
+.onboarding-welcome .login-wechat .ui-icon,.onboarding-welcome .login-apple .ui-icon{filter:brightness(0) invert(1)}
+.welcome-divider{display:flex;align-items:center;gap:14px;width:72%;margin:14px auto;color:#99958b;font-size:12px}
+.welcome-divider::before,.welcome-divider::after{content:'';height:1px;flex:1;background:#d4cfc3}
+.onboarding-welcome .welcome-start{width:76%;min-height:42px;margin:0 auto;border:1px solid #6c7b52;background:transparent;color:#5d6e43;font-size:16px;box-shadow:none}
+.onboarding-welcome .welcome-footer{margin:18px 0 10px;font-size:10px;letter-spacing:1px;color:#99958b}
+.onboarding-welcome .welcome-skip{font-size:12px;min-height:38px;display:inline-flex;align-items:center;position:relative;z-index:1;color:#607347}
+.welcome-table-art{position:absolute;bottom:0;left:0;width:100%;height:auto;pointer-events:none;z-index:-1;object-fit:contain}
+@media(max-width:360px){.page.onboarding-page:has(.onboarding-welcome){padding-inline:24px}.onboarding-welcome h1{font-size:29px}.onboarding-welcome .welcome-hero{height:222px}.welcome-basket-art{height:200px}}
+.onboarding-welcome{font-family:'Noto Sans SC','Source Han Sans SC',sans-serif}
+.onboarding-welcome .welcome-basket-art{height:auto;aspect-ratio:1312/720}
+.onboarding-welcome .login-options .button{margin:0}

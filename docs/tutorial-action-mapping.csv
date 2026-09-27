@@ -1,0 +1,42 @@
+actionCode,label,asset
+sanitize,清洗消毒,/assets/library/tutorial-actions/sanitize.png
+rice_setup,淘米准备,/assets/library/tutorial-actions/rice_setup.png
+cook_rice,电饭煲煮饭,/assets/library/tutorial-actions/cook_rice.png
+wash,清洗,/assets/library/tutorial-actions/wash.png
+soak,浸泡,/assets/library/tutorial-actions/soak.png
+drain,沥水,/assets/library/tutorial-actions/drain.png
+peel,去皮,/assets/library/tutorial-actions/peel.png
+cut,切 / 切块,/assets/library/tutorial-actions/cut.png
+slice,切片,/assets/library/tutorial-actions/slice.png
+dice,切丁 / 小块,/assets/library/tutorial-actions/dice.png
+shred,切丝,/assets/library/tutorial-actions/shred.png
+mince,切末 / 切碎,/assets/library/tutorial-actions/mince.png
+crush,拍碎 / 压碎,/assets/library/tutorial-actions/crush.png
+beat,打散,/assets/library/tutorial-actions/beat.png
+mix,搅拌 / 拌匀,/assets/library/tutorial-actions/mix.png
+marinate,腌制,/assets/library/tutorial-actions/marinate.png
+coat,裹粉 / 挂浆,/assets/library/tutorial-actions/coat.png
+add_ingredient,下料,/assets/library/tutorial-actions/add_ingredient.png
+add_water,加水 / 高汤,/assets/library/tutorial-actions/add_water.png
+season,调味,/assets/library/tutorial-actions/season.png
+stir,翻拌 / 推拌,/assets/library/tutorial-actions/stir.png
+stir_fry,翻炒,/assets/library/tutorial-actions/stir_fry.png
+pan_fry,煎,/assets/library/tutorial-actions/pan_fry.png
+flip,翻面,/assets/library/tutorial-actions/flip.png
+deep_fry,炸,/assets/library/tutorial-actions/deep_fry.png
+boil,煮,/assets/library/tutorial-actions/boil.png
+blanch,焯水,/assets/library/tutorial-actions/blanch.png
+simmer,小火煮 / 焖,/assets/library/tutorial-actions/simmer.png
+steam,蒸,/assets/library/tutorial-actions/steam.png
+cover,盖盖等待,/assets/library/tutorial-actions/cover.png
+wait,静置 / 等待,/assets/library/tutorial-actions/wait.png
+plate,盛出 / 装盘,/assets/library/tutorial-actions/plate.png
+garnish,撒料 / 点缀,/assets/library/tutorial-actions/garnish.png
+knead,揉面 / 揉团,/assets/library/tutorial-actions/knead.png
+roll,擀开,/assets/library/tutorial-actions/roll.png
+wrap,包 / 卷,/assets/library/tutorial-actions/wrap.png
+roast_bake,烤,/assets/library/tutorial-actions/roast_bake.png
+air_fry,空气炸,/assets/library/tutorial-actions/air_fry.png
+reduce,收汁,/assets/library/tutorial-actions/reduce.png
+thicken,勾芡,/assets/library/tutorial-actions/thicken.png
+blend,搅打 / 打碎,/assets/library/tutorial-actions/blend.png

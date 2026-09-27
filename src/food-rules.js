@@ -6,7 +6,7 @@ export const availableQty=(s,id)=>s.stock.filter(l=>l.ingredientId===id&&l.statu
 export const pantryStatus=(s,id)=>s.pantry?.[id]||(availableQty(s,id)>0?'有':'没有');
 export const plannerQty=(s,id)=>s.cycle.carryOverEnabled!==false&&!(s.cycle.excludedStockIds||[]).includes(id)?availableQty(s,id):0;
 export const cycleGoals=['蔬菜多一点','肉蛋奶都来点','耐放一点','换换口味','适合带饭'];
-export function normalizeProductState(s){s.cycle.goals=[...new Set((s.cycle.goals||[]).map(g=>({'多些蔬菜':'蔬菜多一点','蛋豆肉换着吃':'肉蛋奶都来点'}[g]||g)))].filter(g=>cycleGoals.includes(g)).slice(0,2);s.cycle.excludedStockIds??=[];s.pantry??={};s.unitPrefs??={};s.meal.constraints.cuisines??=[];s.meal.constraints.flavors??=[];return s;}
+export function normalizeProductState(s){s.cycle.goals=[...new Set((s.cycle.goals||[]).map(g=>({'多些蔬菜':'蔬菜多一点','蛋豆肉换着吃':'肉蛋奶都来点'}[g]||g)))].filter(g=>cycleGoals.includes(g));s.cycle.excludedStockIds??=[];s.pantry??={};s.unitPrefs??={};s.meal.constraints.cuisines??=[];s.meal.constraints.flavors??=[];return s;}
 export function unitInfo(s,id){if(id==='milk')return s.unitPrefs?.milk==='bottle'?{unit:'瓶',size:1000}:{unit:'盒',size:250};if(isPantry(id))return {unit:['salt','sugar'].includes(id)?'袋':'瓶',size:500};return {unit:ingredients[id].unit,size:1};}
 export function displayQty(s,id,qty){const u=unitInfo(s,id);return `${Math.round(qty/u.size*100)/100} ${u.unit}`;}
 export function stockLabel(s,id){return isPantry(id)?pantryStatus(s,id):displayQty(s,id,availableQty(s,id));}

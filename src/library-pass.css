@@ -226,7 +226,7 @@
 .tutorial-prep-cards{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding:3px 0 8px}
 .tutorial-prep-card{flex:0 0 132px;scroll-snap-align:start;border:1px solid #e9e2d4;border-radius:13px;background:#fffdf6;padding:7px}
 .tutorial-state-art{position:relative;aspect-ratio:1.18;overflow:hidden;border-radius:9px;background:#f1e8d8;display:grid;place-items:center}
-.tutorial-state-art>img{display:block;width:100%;height:100%;object-fit:contain;transform:scale(1.75)}
+.tutorial-state-art>img{display:block;width:100%;height:100%;object-fit:contain;transform:none}
 .tutorial-state-art>b{position:absolute;left:4px;top:4px;width:22px;height:22px;border:1px solid #fffdf5;border-radius:50%;display:grid;place-items:center;background:#496d3a;color:#fff;font-size:12px}
 .tutorial-prep-card h3{font-size:13px;line-height:1.5;margin:8px 0 4px;color:#283c28}
 .tutorial-prep-card p{font-size:11px;line-height:1.7;color:#6c7161;overflow-wrap:anywhere}
@@ -353,3 +353,74 @@
 .cook-page .round-table .table-dish h3{position:relative;isolation:isolate;background:none;border:0;border-radius:0;box-shadow:none;line-height:24px}
 .cook-page.typography-preview .round-table .table-dish h3{font-size:12px!important;font-weight:500!important;letter-spacing:.2px}
 .cook-page .round-table .table-dish h3::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;border:6px solid transparent;border-image:url('/assets/library/deckled-paper.png') 65 fill / 6px / 0 stretch;filter:drop-shadow(0 1px 1px #735c3514)}
+
+.direction-sheet .flavor-options .flavor-art{display:block;width:28px;height:28px;flex-shrink:0;object-fit:contain}
+
+.tutorial-state-art:has(.tutorial-action-image){background:transparent}
+.tutorial-action-image{object-fit:contain;filter:none;transform:none}
+.tutorial-neutral{background:#f5f1e8;color:#8a867b;font-size:11px}
+
+/* A small calendar strip and equal-size duration / meal controls. */
+.plan-page .plan-date-picker{min-width:0;margin:13px 0 16px}
+.plan-page .plan-date-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:#797b6e;margin-bottom:9px}
+.plan-page .plan-date-heading strong{font-size:12px;font-weight:500;color:#536641}
+.plan-page .plan-date-strip{position:relative;display:flex;gap:7px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#d5dac6 transparent;padding:3px 0 6px}
+.plan-page .plan-date{flex:0 0 44px;display:flex;flex-direction:column;align-items:center;gap:2px;scroll-snap-align:center;padding:0;min-height:67px;color:#535948}
+.plan-page .plan-date small{font-size:10px;line-height:16px;color:inherit}
+.plan-page .plan-date b{display:grid;place-items:center;width:35px;height:35px;border:1px solid #e6e1d3;border-radius:50%;background:#fffdf7;font-size:16px;font-weight:500}
+.plan-page .plan-date>span{font-size:9px;line-height:12px;color:#8b8c7e}
+.plan-page .plan-date.active b{background:#607c49;border-color:#607c49;color:#fff}
+.plan-page .plan-date.active small{color:#476134;font-weight:500}
+.plan-page .plan-count-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:8px}
+.plan-page .plan-count-options>.chip,.plan-page .plan-custom-count{box-sizing:border-box;min-width:0;width:100%;height:52px;min-height:52px;border:1px solid #e5dfce;border-radius:11px;margin:0;background:#fffdf7}
+.plan-page .plan-count-options>.chip{padding:8px 4px;font-size:14px}
+.plan-page .plan-count-options>.chip.active{background:#607c49;color:#fff;border-color:#607c49}
+.plan-page .plan-custom-count{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;padding:4px 6px}
+.plan-page .plan-custom-count small{font-size:10px;line-height:15px;color:#838777}
+.plan-page .plan-custom-count input{display:block;min-width:0;width:100%;height:25px;min-height:25px;padding:0;border:0;border-radius:0;background:transparent;text-align:center;font-size:17px;line-height:25px}
+.plan-page .plan-custom-count.active,.plan-page .plan-custom-count:focus-within{border-color:#607c49;background:#f0f3e7}
+.plan-page .fields{grid-template-columns:minmax(0,1fr);min-width:0}
+.plan-page .fields>section{min-width:0}
+
+.plan-page .fields>section:nth-child(-n+2){width:100%;padding-inline:0;margin-inline:0}
+.plan-page .fields>section:nth-child(-n+2) .plan-count-options{width:100%;margin:0;padding:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+.plan-page .fields>section:nth-child(-n+2) .plan-custom-count{display:flex;justify-content:center;align-items:center}
+.plan-page .plan-date{position:relative;isolation:isolate}
+.plan-page .plan-date.in-range::before{content:'';position:absolute;z-index:-1;top:18px;left:-4px;right:-4px;height:35px;background:#e4ebd7}
+.plan-page .plan-date.range-start::before{left:50%}
+.plan-page .plan-date.range-end::before{right:50%}
+.plan-page .plan-date.range-start.range-end::before{display:none}
+.plan-page .plan-date.in-range:not(.active) b{background:transparent;border-color:transparent;color:#476134}
+.plan-page .plan-date-help{display:block;font-size:10px;margin-top:5px}
+
+.plan-wanted-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0 12px}
+.plan-wanted-card{position:relative;min-width:0;padding:8px;border:1px solid #e5dfce;border-radius:12px;background:#fffdf7;text-align:center}
+.plan-wanted-card .food-image{height:85px;background:transparent}
+.plan-wanted-card .food-image img{object-fit:contain}
+.plan-wanted-card>span{display:block;font-size:13px;margin:4px 0}
+.plan-wanted-card>small{font-size:11px;color:#797b6e}
+.plan-wanted-card.active{border-color:#607c49;background:#f0f3e7}
+.plan-wanted-card.active>small{color:#476134}
+.plan-wanted-selected{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.plan-wanted-selected .chip{font-size:11px;min-height:32px;padding:5px 8px}
+.plan-wanted>.button{font-size:13px;min-height:40px}
+
+.plan-page .plan-basket{width:88px;height:64px;flex-shrink:0}
+.plan-wanted-card .food-image.mapped-food{height:85px;grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}
+.plan-wanted-card .food-image.mapped-food>img.mapped-dish{height:120px!important;max-height:120px;object-fit:contain!important}
+.plan-wanted-card[data-action="plan-want|miso_tofu_soup"] .food-image.mapped-food>img.mapped-dish,
+.plan-wanted-card[data-action="plan-want|potato_egg"] .food-image.mapped-food>img.mapped-dish{width:90%!important;height:105px!important;max-height:105px}
+
+.ingredient-pair{display:block;width:100%;height:100%;background-image:url('/assets/library/ingredients/cheese-kimchi.png');background-repeat:no-repeat}
+.ingredient-pair.cheese{background-size:192.3% auto;background-position:left center}
+.ingredient-pair.kimchi{background-size:208.3% auto;background-position:right center}
+.purchase-selection{font-size:12px;color:#797b6e;margin:4px 0 8px}
+.purchase-selection .text-button{min-height:40px;padding:6px 12px;border:1px solid #dce1cf;border-radius:20px}
+.cook-page .multi-dish-table .table-plates{transform:translateY(-32px);row-gap:8px}
+.cook-page .multi-dish-table .table-dish .food-image{height:58px;grid-template-rows:minmax(0,1fr)}
+
+.cook-page .multi-dish-table .table-plates{transform:translateY(-44px)}
+.cook-page .five-dish-table .table-plates{grid-template-columns:repeat(6,minmax(0,1fr))}
+.cook-page .five-dish-table .table-dish{grid-column:span 2}
+.cook-page .five-dish-table .table-dish:nth-child(4){grid-column:2/span 2}
+.cook-page .five-dish-table .table-dish:nth-child(5){grid-column:4/span 2}
