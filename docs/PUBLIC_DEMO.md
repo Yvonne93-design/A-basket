@@ -1,5 +1,15 @@
 # 一篮 · 可运行作品提交说明
 
+## Netlify 公开体验
+
+固定地址：https://yilan-yvonne.netlify.app/preview.html
+
+站点 ID：`1ea161b1-d4bf-4c66-ab74-41e2690414c6`。使用公开访问，不要求访客登录 Netlify。本地电脑关闭后仍可访问；各地区网络可达性需实际测试。
+
+更新同一地址：`npm run build` 后执行 `npx netlify-cli deploy --prod --site 1ea161b1-d4bf-4c66-ab74-41e2690414c6 --no-build`。当前未连接 Git 自动发布，仅推送代码不会更新线上版本。
+
+Netlify 的模型服务端配置使用 `YILAN_AI_API_KEY`、`YILAN_AI_BASE_URL`、`YILAN_AI_MODEL`，避免误用平台自动注入的其他模型凭据。不配置时保留现有本地规则回退。
+
 ## 入口
 
 源码分支：`feature/iphone17-v0`，仓库 `https://github.com/Yvonne93-design/A-basket`。不要只下载目前仍为初始内容的 main 分支。
