@@ -1,0 +1,20 @@
+import {cp,mkdir,readFile,writeFile,rm} from 'node:fs/promises';
+// Publish runtime files only; never copy .env, private data, reports or reference art.
+await rm('dist',{recursive:true,force:true});
+await mkdir('dist/server/server',{recursive:true});
+await cp('public','dist/client',{recursive:true});
+await cp('src','dist/client/src',{recursive:true});
+await cp('src','dist/server/src',{recursive:true});
+await cp('server/site-worker.js','dist/server/index.js');
+let gateway=await readFile('server/ai-gateway.js','utf8');
+const start=gateway.indexOf('export async function readAIConfig(){');
+const end=gateway.indexOf('\nconst object=',start);
+if(start<0||end<0)throw new Error('Gateway configuration boundary changed; review build adapter.');
+gateway=gateway.slice(0,start)+"export async function readAIConfig(){throw new Error('Server environment configuration required');}\n"+gateway.slice(end);
+gateway=gateway.replace("import {readFile} from 'node:fs/promises';",'').replace("import {createHash} from 'node:crypto';",'');
+const hash="createHash('sha256').update(JSON.stringify([config.baseUrl,config.model,config.apiKey,task,context])).digest('hex')";
+if(!gateway.includes(hash))throw new Error('Gateway hash boundary changed; review build adapter.');
+gateway=gateway.replace(hash,"await sha256(JSON.stringify([config.baseUrl,config.model,config.apiKey,task,context]))");
+gateway+="\nasync function sha256(value){const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value));return Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');}\n";
+await writeFile('dist/server/server/ai-gateway.js',gateway);
+console.log('Site build ready: original UI + shared AI gateway, cloud environment only.');

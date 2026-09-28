@@ -19,7 +19,7 @@ npm start
 
 直接应用入口：http://localhost:4173 。当前实现是移动 Web V0，并非已打包的原生 iOS App。
 
-预览逻辑屏幕 402 × 874（@3x 对应 1206 × 2622 像素），参考 [Apple 技术规格](https://www.apple.com/iphone-17/specs/)。状态栏、灵动岛和 Home Indicator 为 CSS 预览装饰；模拟顶部 62、底部 34 安全区，真实设备读取 env(safe-area-inset-*)，不声称等同 iOS Simulator。服务仅监听本机回环地址，当前没有公网或手机远程访问地址。
+预览逻辑屏幕 402 × 874（@3x 对应 1206 × 2622 像素），参考 [Apple 技术规格](https://www.apple.com/iphone-17/specs/)。状态栏、灵动岛和 Home Indicator 为 CSS 预览装饰；模拟顶部 62、底部 34 安全区，真实设备读取 env(safe-area-inset-*)，不声称等同 iOS Simulator。本地服务仅监听本机回环地址。固定公网访问与部署方式见 `docs/PUBLIC_DEMO.md`。
 
 ```sh
 npm run check
@@ -55,7 +55,7 @@ npm test
 - `src/domain.js`：数量、硬限制、库存批次、采购事务、FIFO 扣减、幂等和资源排程校验。
 - `src/ai.js`：AIService + MockAdapter + RealAIAdapter。
 - `src/app.js`：路由、组件和交互；`src/style.css`：视觉 tokens 和移动布局。
-- `tests/domain.test.mjs`：业务与库存测试；另有 AI 网关、排程和升级场景测试（合计 36 项）。
+- `tests/domain.test.mjs`：业务与库存测试；另有 AI 网关、排程和升级场景测试（当前数量以 `npm test` 输出为准）。
 - `qa/`：浏览器路由检查及视觉截图，仅用于验收，不由应用引用。
 
 ## DeepSeek 接入
@@ -74,7 +74,7 @@ npm test
 
 提供 `render.yaml`，采用支持 Node 的 Web Service；保留 `/api/ai`，不需要重写服务。静态托管不支持 server-side AI，不能作为真实 AI 验收版本。
 
-在 Render 连接这个仓库的 `feature/iphone17-v0` 分支创建 Blueprint，并在私密环境变量 `OPENAI_API_KEY` 填写密钥。其他配置由文件提供，平台分配 `onrender.com` URL。参考 [Render 官方部署说明](https://render.com/docs/deploy-node-express-app) 和 [Blueprint 配置](https://render.com/docs/blueprint-spec)。配置尚在本地，须同步到 GitHub 后才能从远程部署。未创建云服务，也未产生公网 URL。免费实例可能休眠，正式评审前需要验证冷启动和实际调用。
+在 Render 连接这个仓库的 `feature/iphone17-v0` 分支创建 Blueprint，并在私密环境变量 `OPENAI_API_KEY` 填写密钥。其他配置由文件提供，平台分配 `onrender.com` URL。参考 [Render 官方部署说明](https://render.com/docs/deploy-node-express-app) 和 [Blueprint 配置](https://render.com/docs/blueprint-spec)。此 Render 配置为备选方案，并不代表已创建 Render 服务；当前公网发布采用 Sites，见 `docs/PUBLIC_DEMO.md`。免费实例可能休眠，正式评审前需要验证冷启动和实际调用。
 
 部署后运行 `node scripts/verify-demo.mjs https://实际域名`，确认 status 已配置、两项主能力返回 `meta.source: real`，再将地址交给评委。评委无需登录模型平台或填写密钥。
 

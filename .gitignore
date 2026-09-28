@@ -6,3 +6,10 @@ node_modules/
 *.log
 qa/
 *.zip
+
+# Generated deployment and review artifacts
+dist/
+.sites-runtime/
+output/community-review/
+output/page-atlas/
+output/page-atlas-hd/
